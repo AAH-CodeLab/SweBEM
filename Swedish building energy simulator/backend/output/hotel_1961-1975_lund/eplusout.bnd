@@ -1,0 +1,494 @@
+Program Version,EnergyPlus, Version 25.2.0-cf7368216c, YMD=2026.03.04 01:18
+! This file shows details about the branches, nodes, and other
+! elements of the flow connections.
+! This file is intended for use in "debugging" potential problems
+! that may also be detected by the program, but may be more easily
+! identified by "eye".
+! This file is also intended to support software which draws a
+! schematic diagram of the HVAC system.
+! ===============================================================
+! #Nodes,<Number of Unique Nodes>
+ #Nodes,89
+! <Node>,<NodeNumber>,<Node Name>,<Node Fluid Type>,<# Times Node Referenced After Definition>
+ Node,1,BASEMENT AIR NODE,Air,0
+ Node,2,BASEMENT INLET NODES,Air,1
+ Node,3,BASEMENT RETURN AIR NODE,Air,1
+ Node,4,RETAIL_1_FLR_1 AIR NODE,Air,0
+ Node,5,RETAIL_1_FLR_1 INLET NODES,Air,1
+ Node,6,RETAIL_1_FLR_1 RETURN AIR NODE,Air,1
+ Node,7,RETAIL_2_FLR_1 AIR NODE,Air,0
+ Node,8,RETAIL_2_FLR_1 INLET NODES,Air,1
+ Node,9,RETAIL_2_FLR_1 RETURN AIR NODE,Air,1
+ Node,10,MECH_FLR_1 AIR NODE,Air,0
+ Node,11,MECH_FLR_1 INLET NODES,Air,1
+ Node,12,MECH_FLR_1 RETURN AIR NODE,Air,1
+ Node,13,STORAGE_FLR_1 AIR NODE,Air,0
+ Node,14,STORAGE_FLR_1 INLET NODES,Air,1
+ Node,15,STORAGE_FLR_1 RETURN AIR NODE,Air,1
+ Node,16,LAUNDRY_FLR_1 AIR NODE,Air,0
+ Node,17,LAUNDRY_FLR_1 INLET NODES,Air,1
+ Node,18,LAUNDRY_FLR_1 RETURN AIR NODE,Air,1
+ Node,19,CAFE_FLR_1 AIR NODE,Air,0
+ Node,20,CAFE_FLR_1 INLET NODES,Air,1
+ Node,21,CAFE_FLR_1 RETURN AIR NODE,Air,1
+ Node,22,LOBBY_FLR_1 AIR NODE,Air,0
+ Node,23,LOBBY_FLR_1 INLET NODES,Air,1
+ Node,24,LOBBY_FLR_1 RETURN AIR NODE,Air,1
+ Node,25,ROOM_1_FLR_3 AIR NODE,Air,0
+ Node,26,ROOM_1_FLR_3 INLET NODES,Air,1
+ Node,27,ROOM_1_FLR_3 RETURN AIR NODE,Air,1
+ Node,28,ROOM_2_FLR_3 AIR NODE,Air,0
+ Node,29,ROOM_2_FLR_3 INLET NODES,Air,1
+ Node,30,ROOM_2_FLR_3 RETURN AIR NODE,Air,1
+ Node,31,ROOM_3_MULT19_FLR_3 AIR NODE,Air,0
+ Node,32,ROOM_3_MULT19_FLR_3 INLET NODES,Air,1
+ Node,33,ROOM_3_MULT19_FLR_3 RETURN AIR NODE,Air,1
+ Node,34,ROOM_4_MULT19_FLR_3 AIR NODE,Air,0
+ Node,35,ROOM_4_MULT19_FLR_3 INLET NODES,Air,1
+ Node,36,ROOM_4_MULT19_FLR_3 RETURN AIR NODE,Air,1
+ Node,37,ROOM_5_FLR_3 AIR NODE,Air,0
+ Node,38,ROOM_5_FLR_3 INLET NODES,Air,1
+ Node,39,ROOM_5_FLR_3 RETURN AIR NODE,Air,1
+ Node,40,ROOM_6_FLR_3 AIR NODE,Air,0
+ Node,41,ROOM_6_FLR_3 INLET NODES,Air,1
+ Node,42,ROOM_6_FLR_3 RETURN AIR NODE,Air,1
+ Node,43,CORRIDOR_FLR_3 AIR NODE,Air,0
+ Node,44,CORRIDOR_FLR_3 INLET NODES,Air,1
+ Node,45,CORRIDOR_FLR_3 RETURN AIR NODE,Air,1
+ Node,46,ROOM_1_FLR_6 AIR NODE,Air,0
+ Node,47,ROOM_1_FLR_6 INLET NODES,Air,1
+ Node,48,ROOM_1_FLR_6 RETURN AIR NODE,Air,1
+ Node,49,ROOM_2_FLR_6 AIR NODE,Air,0
+ Node,50,ROOM_2_FLR_6 INLET NODES,Air,1
+ Node,51,ROOM_2_FLR_6 RETURN AIR NODE,Air,1
+ Node,52,ROOM_3_MULT9_FLR_6 AIR NODE,Air,0
+ Node,53,ROOM_3_MULT9_FLR_6 INLET NODES,Air,1
+ Node,54,ROOM_3_MULT9_FLR_6 RETURN AIR NODE,Air,1
+ Node,55,BANQUET_FLR_6 AIR NODE,Air,0
+ Node,56,BANQUET_FLR_6 INLET NODES,Air,1
+ Node,57,BANQUET_FLR_6 RETURN AIR NODE,Air,1
+ Node,58,DINING_FLR_6 AIR NODE,Air,0
+ Node,59,DINING_FLR_6 INLET NODES,Air,1
+ Node,60,DINING_FLR_6 RETURN AIR NODE,Air,1
+ Node,61,KITCHEN_FLR_6 AIR NODE,Air,0
+ Node,62,KITCHEN_FLR_6 INLET NODES,Air,1
+ Node,63,KITCHEN_FLR_6 RETURN AIR NODE,Air,1
+ Node,64,CORRIDOR_FLR_6 AIR NODE,Air,0
+ Node,65,CORRIDOR_FLR_6 INLET NODES,Air,1
+ Node,66,CORRIDOR_FLR_6 RETURN AIR NODE,Air,1
+ Node,67,BOTTOM OUTDOORAIR NODE,Air,0
+ Node,68,BANQUET_FLR_6 OUTDOOR AIR INLET NODE,Air,1
+ Node,69,BASEMENT OUTDOOR AIR INLET NODE,Air,1
+ Node,70,CAFE_FLR_1 OUTDOOR AIR INLET NODE,Air,1
+ Node,71,CORRIDOR_FLR_3 OUTDOOR AIR INLET NODE,Air,1
+ Node,72,CORRIDOR_FLR_6 OUTDOOR AIR INLET NODE,Air,1
+ Node,73,DINING_FLR_6 OUTDOOR AIR INLET NODE,Air,1
+ Node,74,KITCHEN_FLR_6 OUTDOOR AIR INLET NODE,Air,1
+ Node,75,LAUNDRY_FLR_1 OUTDOOR AIR INLET NODE,Air,1
+ Node,76,LOBBY_FLR_1 OUTDOOR AIR INLET NODE,Air,1
+ Node,77,MECH_FLR_1 OUTDOOR AIR INLET NODE,Air,1
+ Node,78,RETAIL_1_FLR_1 OUTDOOR AIR INLET NODE,Air,1
+ Node,79,RETAIL_2_FLR_1 OUTDOOR AIR INLET NODE,Air,1
+ Node,80,ROOM_1_FLR_3 OUTDOOR AIR INLET NODE,Air,1
+ Node,81,ROOM_1_FLR_6 OUTDOOR AIR INLET NODE,Air,1
+ Node,82,ROOM_2_FLR_3 OUTDOOR AIR INLET NODE,Air,1
+ Node,83,ROOM_2_FLR_6 OUTDOOR AIR INLET NODE,Air,1
+ Node,84,ROOM_3_MULT9_FLR_6 OUTDOOR AIR INLET NODE,Air,1
+ Node,85,ROOM_3_MULT19_FLR_3 OUTDOOR AIR INLET NODE,Air,1
+ Node,86,ROOM_4_MULT19_FLR_3 OUTDOOR AIR INLET NODE,Air,1
+ Node,87,ROOM_5_FLR_3 OUTDOOR AIR INLET NODE,Air,1
+ Node,88,ROOM_6_FLR_3 OUTDOOR AIR INLET NODE,Air,1
+ Node,89,STORAGE_FLR_1 OUTDOOR AIR INLET NODE,Air,1
+! ===============================================================
+! Suspicious nodes have 0 references.  It is normal for some nodes, however.
+! Listing nodes with 0 references (culled from previous list):
+! <Suspicious Node>,<NodeNumber>,<Node Name>,<Node Fluid Type>,<# Times Node Referenced After Definition>
+ Suspicious Node,1,BASEMENT AIR NODE,Air,0
+ Suspicious Node,4,RETAIL_1_FLR_1 AIR NODE,Air,0
+ Suspicious Node,7,RETAIL_2_FLR_1 AIR NODE,Air,0
+ Suspicious Node,10,MECH_FLR_1 AIR NODE,Air,0
+ Suspicious Node,13,STORAGE_FLR_1 AIR NODE,Air,0
+ Suspicious Node,16,LAUNDRY_FLR_1 AIR NODE,Air,0
+ Suspicious Node,19,CAFE_FLR_1 AIR NODE,Air,0
+ Suspicious Node,22,LOBBY_FLR_1 AIR NODE,Air,0
+ Suspicious Node,25,ROOM_1_FLR_3 AIR NODE,Air,0
+ Suspicious Node,28,ROOM_2_FLR_3 AIR NODE,Air,0
+ Suspicious Node,31,ROOM_3_MULT19_FLR_3 AIR NODE,Air,0
+ Suspicious Node,34,ROOM_4_MULT19_FLR_3 AIR NODE,Air,0
+ Suspicious Node,37,ROOM_5_FLR_3 AIR NODE,Air,0
+ Suspicious Node,40,ROOM_6_FLR_3 AIR NODE,Air,0
+ Suspicious Node,43,CORRIDOR_FLR_3 AIR NODE,Air,0
+ Suspicious Node,46,ROOM_1_FLR_6 AIR NODE,Air,0
+ Suspicious Node,49,ROOM_2_FLR_6 AIR NODE,Air,0
+ Suspicious Node,52,ROOM_3_MULT9_FLR_6 AIR NODE,Air,0
+ Suspicious Node,55,BANQUET_FLR_6 AIR NODE,Air,0
+ Suspicious Node,58,DINING_FLR_6 AIR NODE,Air,0
+ Suspicious Node,61,KITCHEN_FLR_6 AIR NODE,Air,0
+ Suspicious Node,64,CORRIDOR_FLR_6 AIR NODE,Air,0
+ Suspicious Node,67,BOTTOM OUTDOORAIR NODE,Air,0
+! ===============================================================
+! <#Branch Lists>,<Number of Branch Lists>
+ #Branch Lists,0
+! <Branch List>,<Branch List Count>,<Branch List Name>,<Loop Name>,<Loop Type>,<Number of Branches>
+! <Branch>,<Branch Count>,<Branch Name>,<Loop Name>,<Loop Type>,<Branch Inlet Node Name>,<Branch Outlet Node Name>
+! ===============================================================
+! <#Supply Air Paths>,<Number of Supply Air Paths>
+ #Supply Air Paths,0
+! <Supply Air Path>,<Supply Air Path Count>,<Supply Air Path Name>,<AirLoopHVAC Name>
+! <#Components on Supply Air Path>,<Number of Components>
+! <Supply Air Path Component>,<Component Count>,<Component Type>,<Component Name>,<AirLoopHVAC Name>
+! <#Outlet Nodes on Supply Air Path Component>,<Number of Nodes>
+! <Supply Air Path Component Nodes>,<Node Count>,<Component Type>,<Component Name>,<Inlet Node Name>,<Outlet Node Name>,<AirLoopHVAC Name>
+! ===============================================================
+! <#Return Air Paths>,<Number of Return Air Paths>
+ #Return Air Paths,0
+! <Return Air Path>,<Return Air Path Count>,<Return Air Path Name>,<AirLoopHVAC Name>
+! <#Components on Return Air Path>,<Number of Components>
+! <Return Air Path Component>,<Component Count>,<Component Type>,<Component Name>,<AirLoopHVAC Name>
+! <#Inlet Nodes on Return Air Path Component>,<Number of Nodes>
+! <Return Air Path Component Nodes>,<Node Count>,<Component Type>,<Component Name>,<Inlet Node Name>,<Outlet Node Name>,<AirLoopHVAC Name>
+! ===============================================================
+! #Outdoor Air Nodes,<Number of Outdoor Air Nodes>
+ #Outdoor Air Nodes,23
+! <Outdoor Air Node>,<NodeNumber>,<Node Name>
+ Outdoor Air Node,67,BOTTOM OUTDOORAIR NODE
+ Outdoor Air Node,68,BANQUET_FLR_6 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,69,BASEMENT OUTDOOR AIR INLET NODE
+ Outdoor Air Node,70,CAFE_FLR_1 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,71,CORRIDOR_FLR_3 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,72,CORRIDOR_FLR_6 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,73,DINING_FLR_6 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,74,KITCHEN_FLR_6 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,75,LAUNDRY_FLR_1 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,76,LOBBY_FLR_1 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,77,MECH_FLR_1 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,78,RETAIL_1_FLR_1 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,79,RETAIL_2_FLR_1 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,80,ROOM_1_FLR_3 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,81,ROOM_1_FLR_6 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,82,ROOM_2_FLR_3 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,83,ROOM_2_FLR_6 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,84,ROOM_3_MULT9_FLR_6 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,85,ROOM_3_MULT19_FLR_3 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,86,ROOM_4_MULT19_FLR_3 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,87,ROOM_5_FLR_3 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,88,ROOM_6_FLR_3 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,89,STORAGE_FLR_1 OUTDOOR AIR INLET NODE
+! ===============================================================
+! <#Component Sets>,<Number of Component Sets>
+ #Component Sets,0
+! <Component Set>,<Component Set Count>,<Parent Object Type>,<Parent Object Name>,<Component Type>,<Component Name>,<Inlet Node ID>,<Outlet Node ID>,<Description>
+! ===============================================================
+! <# Plant Loops>,<Number of Plant Loops>
+ #Plant Loops,0
+! <Plant Loop>,<Plant Loop Name>,<Loop Type>,<Inlet Node Name>,<Outlet Node Name>,<Branch List>,<Connector List>
+! <Plant Loop Connector>,<Connector Type>,<Connector Name>,<Loop Name>,<Loop Type>,<Number of Inlets/Outlets>
+! <Plant Loop Connector Branches>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Branch>,<Outlet Branch>,<Loop Name>,<Loop Type>
+! <Plant Loop Connector Nodes>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Node>,<Outlet Node>,<Loop Name>,<Loop Type>
+! <Plant Loop Supply Connection>,<Plant Loop Name>,<Supply Side Outlet Node Name>,<Demand Side Inlet Node Name>
+! <Plant Loop Return Connection>,<Plant Loop Name>,<Demand Side Outlet Node Name>,<Supply Side Inlet Node Name>
+! ===============================================================
+! <# Condenser Loops>,<Number of Condenser Loops>
+ #Condenser Loops,0
+! <Condenser Loop>,<Condenser Loop Name>,<Loop Type>,<Inlet Node Name>,<Outlet Node Name>,<Branch List>,<Connector List>
+! <Condenser Loop Connector>,<Connector Type>,<Connector Name>,<Loop Name>,<Loop Type>,<Number of Inlets/Outlets>
+! <Condenser Loop Connector Branches>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Branch>,<Outlet Branch>,<Loop Name>,<Loop Type>
+! <Condenser Loop Connector Nodes>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Node>,<Outlet Node>,<Loop Name>,<Loop Type>
+! <Condenser Loop Supply Connection>,<Condenser Loop Name>,<Supply Side Outlet Node Name>,<Demand Side Inlet Node Name>
+! <Condenser Loop Return Connection>,<Condenser Loop Name>,<Demand Side Outlet Node Name>,<Supply Side Inlet Node Name>
+! ===============================================================
+! <# Controlled Zones>,<Number of Controlled Zones>
+ #Controlled Zones,22
+! <Controlled Zone>,<Controlled Zone Name>,<Equip List Name>,<Control List Name>,<Zone Node Name>,<# Inlet Nodes>,<# Exhaust Nodes>,<# Return Nodes>
+! <Controlled Zone Inlet>,<Inlet Node Count>,<Controlled Zone Name>,<Supply Air Inlet Node Name>,<SD Sys:Cooling/Heating [DD:Cooling] Inlet Node Name>,<DD Sys:Heating Inlet Node Name>
+! <Controlled Zone Exhaust>,<Exhaust Node Count>,<Controlled Zone Name>,<Exhaust Air Node Name>
+ Controlled Zone,BASEMENT,BASEMENT EQUIPMENT,,BASEMENT AIR NODE,1,1,0
+   Controlled Zone Inlet,1,BASEMENT,BASEMENT INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,BASEMENT,BASEMENT RETURN AIR NODE
+ Controlled Zone,RETAIL_1_FLR_1,RETAIL_1_FLR_1 EQUIPMENT,,RETAIL_1_FLR_1 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,RETAIL_1_FLR_1,RETAIL_1_FLR_1 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,RETAIL_1_FLR_1,RETAIL_1_FLR_1 RETURN AIR NODE
+ Controlled Zone,RETAIL_2_FLR_1,RETAIL_2_FLR_1 EQUIPMENT,,RETAIL_2_FLR_1 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,RETAIL_2_FLR_1,RETAIL_2_FLR_1 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,RETAIL_2_FLR_1,RETAIL_2_FLR_1 RETURN AIR NODE
+ Controlled Zone,MECH_FLR_1,MECH_FLR_1 EQUIPMENT,,MECH_FLR_1 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,MECH_FLR_1,MECH_FLR_1 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,MECH_FLR_1,MECH_FLR_1 RETURN AIR NODE
+ Controlled Zone,STORAGE_FLR_1,STORAGE_FLR_1 EQUIPMENT,,STORAGE_FLR_1 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,STORAGE_FLR_1,STORAGE_FLR_1 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,STORAGE_FLR_1,STORAGE_FLR_1 RETURN AIR NODE
+ Controlled Zone,LAUNDRY_FLR_1,LAUNDRY_FLR_1 EQUIPMENT,,LAUNDRY_FLR_1 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,LAUNDRY_FLR_1,LAUNDRY_FLR_1 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,LAUNDRY_FLR_1,LAUNDRY_FLR_1 RETURN AIR NODE
+ Controlled Zone,CAFE_FLR_1,CAFE_FLR_1 EQUIPMENT,,CAFE_FLR_1 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,CAFE_FLR_1,CAFE_FLR_1 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,CAFE_FLR_1,CAFE_FLR_1 RETURN AIR NODE
+ Controlled Zone,LOBBY_FLR_1,LOBBY_FLR_1 EQUIPMENT,,LOBBY_FLR_1 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,LOBBY_FLR_1,LOBBY_FLR_1 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,LOBBY_FLR_1,LOBBY_FLR_1 RETURN AIR NODE
+ Controlled Zone,ROOM_1_FLR_3,ROOM_1_FLR_3 EQUIPMENT,,ROOM_1_FLR_3 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,ROOM_1_FLR_3,ROOM_1_FLR_3 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,ROOM_1_FLR_3,ROOM_1_FLR_3 RETURN AIR NODE
+ Controlled Zone,ROOM_2_FLR_3,ROOM_2_FLR_3 EQUIPMENT,,ROOM_2_FLR_3 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,ROOM_2_FLR_3,ROOM_2_FLR_3 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,ROOM_2_FLR_3,ROOM_2_FLR_3 RETURN AIR NODE
+ Controlled Zone,ROOM_3_MULT19_FLR_3,ROOM_3_MULT19_FLR_3 EQUIPMENT,,ROOM_3_MULT19_FLR_3 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,ROOM_3_MULT19_FLR_3,ROOM_3_MULT19_FLR_3 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,ROOM_3_MULT19_FLR_3,ROOM_3_MULT19_FLR_3 RETURN AIR NODE
+ Controlled Zone,ROOM_4_MULT19_FLR_3,ROOM_4_MULT19_FLR_3 EQUIPMENT,,ROOM_4_MULT19_FLR_3 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,ROOM_4_MULT19_FLR_3,ROOM_4_MULT19_FLR_3 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,ROOM_4_MULT19_FLR_3,ROOM_4_MULT19_FLR_3 RETURN AIR NODE
+ Controlled Zone,ROOM_5_FLR_3,ROOM_5_FLR_3 EQUIPMENT,,ROOM_5_FLR_3 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,ROOM_5_FLR_3,ROOM_5_FLR_3 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,ROOM_5_FLR_3,ROOM_5_FLR_3 RETURN AIR NODE
+ Controlled Zone,ROOM_6_FLR_3,ROOM_6_FLR_3 EQUIPMENT,,ROOM_6_FLR_3 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,ROOM_6_FLR_3,ROOM_6_FLR_3 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,ROOM_6_FLR_3,ROOM_6_FLR_3 RETURN AIR NODE
+ Controlled Zone,CORRIDOR_FLR_3,CORRIDOR_FLR_3 EQUIPMENT,,CORRIDOR_FLR_3 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,CORRIDOR_FLR_3,CORRIDOR_FLR_3 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,CORRIDOR_FLR_3,CORRIDOR_FLR_3 RETURN AIR NODE
+ Controlled Zone,ROOM_1_FLR_6,ROOM_1_FLR_6 EQUIPMENT,,ROOM_1_FLR_6 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,ROOM_1_FLR_6,ROOM_1_FLR_6 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,ROOM_1_FLR_6,ROOM_1_FLR_6 RETURN AIR NODE
+ Controlled Zone,ROOM_2_FLR_6,ROOM_2_FLR_6 EQUIPMENT,,ROOM_2_FLR_6 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,ROOM_2_FLR_6,ROOM_2_FLR_6 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,ROOM_2_FLR_6,ROOM_2_FLR_6 RETURN AIR NODE
+ Controlled Zone,ROOM_3_MULT9_FLR_6,ROOM_3_MULT9_FLR_6 EQUIPMENT,,ROOM_3_MULT9_FLR_6 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,ROOM_3_MULT9_FLR_6,ROOM_3_MULT9_FLR_6 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,ROOM_3_MULT9_FLR_6,ROOM_3_MULT9_FLR_6 RETURN AIR NODE
+ Controlled Zone,BANQUET_FLR_6,BANQUET_FLR_6 EQUIPMENT,,BANQUET_FLR_6 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,BANQUET_FLR_6,BANQUET_FLR_6 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,BANQUET_FLR_6,BANQUET_FLR_6 RETURN AIR NODE
+ Controlled Zone,DINING_FLR_6,DINING_FLR_6 EQUIPMENT,,DINING_FLR_6 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,DINING_FLR_6,DINING_FLR_6 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,DINING_FLR_6,DINING_FLR_6 RETURN AIR NODE
+ Controlled Zone,KITCHEN_FLR_6,KITCHEN_FLR_6 EQUIPMENT,,KITCHEN_FLR_6 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,KITCHEN_FLR_6,KITCHEN_FLR_6 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,KITCHEN_FLR_6,KITCHEN_FLR_6 RETURN AIR NODE
+ Controlled Zone,CORRIDOR_FLR_6,CORRIDOR_FLR_6 EQUIPMENT,,CORRIDOR_FLR_6 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,CORRIDOR_FLR_6,CORRIDOR_FLR_6 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,CORRIDOR_FLR_6,CORRIDOR_FLR_6 RETURN AIR NODE
+! ===============================================================
+! <#Zone Equipment Lists>,<Number of Zone Equipment Lists>
+ #Zone Equipment Lists,22
+! <Zone Equipment List>,<Zone Equipment List Count>,<Zone Equipment List Name>,<Zone Name>,<Number of Components>
+! <Zone Equipment Component>,<Component Count>,<Component Type>,<Component Name>,<Zone Name>,<Heating Priority>,<Cooling Priority>
+ Zone Equipment List,1,BASEMENT EQUIPMENT,BASEMENT,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,BASEMENT,BASEMENT,1,1
+ Zone Equipment List,2,RETAIL_1_FLR_1 EQUIPMENT,RETAIL_1_FLR_1,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,RETAIL_1_FLR_1,RETAIL_1_FLR_1,1,1
+ Zone Equipment List,3,RETAIL_2_FLR_1 EQUIPMENT,RETAIL_2_FLR_1,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,RETAIL_2_FLR_1,RETAIL_2_FLR_1,1,1
+ Zone Equipment List,4,MECH_FLR_1 EQUIPMENT,MECH_FLR_1,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,MECH_FLR_1,MECH_FLR_1,1,1
+ Zone Equipment List,5,STORAGE_FLR_1 EQUIPMENT,STORAGE_FLR_1,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,STORAGE_FLR_1,STORAGE_FLR_1,1,1
+ Zone Equipment List,6,LAUNDRY_FLR_1 EQUIPMENT,LAUNDRY_FLR_1,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,LAUNDRY_FLR_1,LAUNDRY_FLR_1,1,1
+ Zone Equipment List,7,CAFE_FLR_1 EQUIPMENT,CAFE_FLR_1,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,CAFE_FLR_1,CAFE_FLR_1,1,1
+ Zone Equipment List,8,LOBBY_FLR_1 EQUIPMENT,LOBBY_FLR_1,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,LOBBY_FLR_1,LOBBY_FLR_1,1,1
+ Zone Equipment List,9,ROOM_1_FLR_3 EQUIPMENT,ROOM_1_FLR_3,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_1_FLR_3,ROOM_1_FLR_3,1,1
+ Zone Equipment List,10,ROOM_2_FLR_3 EQUIPMENT,ROOM_2_FLR_3,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_2_FLR_3,ROOM_2_FLR_3,1,1
+ Zone Equipment List,11,ROOM_3_MULT19_FLR_3 EQUIPMENT,ROOM_3_MULT19_FLR_3,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_3_MULT19_FLR_3,ROOM_3_MULT19_FLR_3,1,1
+ Zone Equipment List,12,ROOM_4_MULT19_FLR_3 EQUIPMENT,ROOM_4_MULT19_FLR_3,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_4_MULT19_FLR_3,ROOM_4_MULT19_FLR_3,1,1
+ Zone Equipment List,13,ROOM_5_FLR_3 EQUIPMENT,ROOM_5_FLR_3,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_5_FLR_3,ROOM_5_FLR_3,1,1
+ Zone Equipment List,14,ROOM_6_FLR_3 EQUIPMENT,ROOM_6_FLR_3,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_6_FLR_3,ROOM_6_FLR_3,1,1
+ Zone Equipment List,15,CORRIDOR_FLR_3 EQUIPMENT,CORRIDOR_FLR_3,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORRIDOR_FLR_3,CORRIDOR_FLR_3,1,1
+ Zone Equipment List,16,ROOM_1_FLR_6 EQUIPMENT,ROOM_1_FLR_6,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_1_FLR_6,ROOM_1_FLR_6,1,1
+ Zone Equipment List,17,ROOM_2_FLR_6 EQUIPMENT,ROOM_2_FLR_6,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_2_FLR_6,ROOM_2_FLR_6,1,1
+ Zone Equipment List,18,ROOM_3_MULT9_FLR_6 EQUIPMENT,ROOM_3_MULT9_FLR_6,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_3_MULT9_FLR_6,ROOM_3_MULT9_FLR_6,1,1
+ Zone Equipment List,19,BANQUET_FLR_6 EQUIPMENT,BANQUET_FLR_6,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,BANQUET_FLR_6,BANQUET_FLR_6,1,1
+ Zone Equipment List,20,DINING_FLR_6 EQUIPMENT,DINING_FLR_6,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,DINING_FLR_6,DINING_FLR_6,1,1
+ Zone Equipment List,21,KITCHEN_FLR_6 EQUIPMENT,KITCHEN_FLR_6,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,KITCHEN_FLR_6,KITCHEN_FLR_6,1,1
+ Zone Equipment List,22,CORRIDOR_FLR_6 EQUIPMENT,CORRIDOR_FLR_6,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORRIDOR_FLR_6,CORRIDOR_FLR_6,1,1
+! ===============================================================
+! <#AirLoopHVACs>,<Number of AirLoopHVACs>
+ #AirLoopHVACs,0
+! <AirLoopHVAC>,<Air Loop Name>,<# Return Nodes>,<# Supply Nodes>,<# Zones Cooled>,<# Zones Heated>,<Outdoor Air Used>
+! <AirLoop Return Connections>,<Connection Count>,<AirLoopHVAC Name>,<Zn Eqp Return Node #>,<Zn Eqp Return Node Name>,<AirLoop Return Node #>,<Air Loop Return Node Name>
+! <AirLoop Supply Connections>,<Connection Count>,<AirLoopHVAC Name>,<Zn Eqp Supply Node #>,<Zn Eqp Supply Node Name>,<AirLoop Supply Node #>,<Air Loop Supply Node Name>
+! <Cooled Zone Info>,<Cooled Zone Count>,<Cooled Zone Name>,<Cooled Zone Inlet Node #>,<Cooled Zone Inlet Node Name>,<AirLoopHVAC Name>
+! <Heated Zone Info>,<Heated Zone Count>,<Heated Zone Name>,<Heated Zone Inlet Node #>,<Heated Zone Inlet Node Name>,<AirLoopHVAC Name>
+! <Outdoor Air Connections>,<OA Inlet Node #>,<OA Return Air Inlet Node Name>,<OA Outlet Node #>,<OA Mixed Air Outlet Node Name>,<AirLoopHVAC Name>
+! <AirLoopHVAC Connector>,<Connector Type>,<Connector Name>,<Loop Name>,<Loop Type>,<Number of Inlets/Outlets>
+! <AirLoopHVAC Connector Branches>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Branch>,<Outlet Branch>,<Loop Name>,<Loop Type>
+! <AirLoopHVAC Connector Nodes>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Node>,<Outlet Node>,<Loop Name>,<Loop Type>
+! ===============================================================
+! <#Parent Node Connections>,<Number of Parent Node Connections>
+ #Parent Node Connections,0
+! <Parent Node Connection>,<Node Name>,<Node ObjectType>,<Node ObjectName>,<Node ConnectionType>,<Node FluidStream>
+! ===============================================================
+! <#Non-Parent Node Connections>,<Number of Non-Parent Node Connections>
+ #Non-Parent Node Connections,155
+! <Non-Parent Node Connection>,<Node Name>,<Node ObjectType>,<Node ObjectName>,<Node ConnectionType>,<Node FluidStream>
+ Non-Parent Node Connection,BASEMENT AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,BASEMENT,ZoneNode,1
+ Non-Parent Node Connection,BASEMENT INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,BASEMENT,ZoneInlet,1
+ Non-Parent Node Connection,BASEMENT RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,BASEMENT,ZoneExhaust,1
+ Non-Parent Node Connection,RETAIL_1_FLR_1 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,RETAIL_1_FLR_1,ZoneNode,1
+ Non-Parent Node Connection,RETAIL_1_FLR_1 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,RETAIL_1_FLR_1,ZoneInlet,1
+ Non-Parent Node Connection,RETAIL_1_FLR_1 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,RETAIL_1_FLR_1,ZoneExhaust,1
+ Non-Parent Node Connection,RETAIL_2_FLR_1 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,RETAIL_2_FLR_1,ZoneNode,1
+ Non-Parent Node Connection,RETAIL_2_FLR_1 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,RETAIL_2_FLR_1,ZoneInlet,1
+ Non-Parent Node Connection,RETAIL_2_FLR_1 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,RETAIL_2_FLR_1,ZoneExhaust,1
+ Non-Parent Node Connection,MECH_FLR_1 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,MECH_FLR_1,ZoneNode,1
+ Non-Parent Node Connection,MECH_FLR_1 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,MECH_FLR_1,ZoneInlet,1
+ Non-Parent Node Connection,MECH_FLR_1 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,MECH_FLR_1,ZoneExhaust,1
+ Non-Parent Node Connection,STORAGE_FLR_1 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,STORAGE_FLR_1,ZoneNode,1
+ Non-Parent Node Connection,STORAGE_FLR_1 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,STORAGE_FLR_1,ZoneInlet,1
+ Non-Parent Node Connection,STORAGE_FLR_1 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,STORAGE_FLR_1,ZoneExhaust,1
+ Non-Parent Node Connection,LAUNDRY_FLR_1 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,LAUNDRY_FLR_1,ZoneNode,1
+ Non-Parent Node Connection,LAUNDRY_FLR_1 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,LAUNDRY_FLR_1,ZoneInlet,1
+ Non-Parent Node Connection,LAUNDRY_FLR_1 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,LAUNDRY_FLR_1,ZoneExhaust,1
+ Non-Parent Node Connection,CAFE_FLR_1 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,CAFE_FLR_1,ZoneNode,1
+ Non-Parent Node Connection,CAFE_FLR_1 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,CAFE_FLR_1,ZoneInlet,1
+ Non-Parent Node Connection,CAFE_FLR_1 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,CAFE_FLR_1,ZoneExhaust,1
+ Non-Parent Node Connection,LOBBY_FLR_1 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,LOBBY_FLR_1,ZoneNode,1
+ Non-Parent Node Connection,LOBBY_FLR_1 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,LOBBY_FLR_1,ZoneInlet,1
+ Non-Parent Node Connection,LOBBY_FLR_1 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,LOBBY_FLR_1,ZoneExhaust,1
+ Non-Parent Node Connection,ROOM_1_FLR_3 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_1_FLR_3,ZoneNode,1
+ Non-Parent Node Connection,ROOM_1_FLR_3 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_1_FLR_3,ZoneInlet,1
+ Non-Parent Node Connection,ROOM_1_FLR_3 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_1_FLR_3,ZoneExhaust,1
+ Non-Parent Node Connection,ROOM_2_FLR_3 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_2_FLR_3,ZoneNode,1
+ Non-Parent Node Connection,ROOM_2_FLR_3 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_2_FLR_3,ZoneInlet,1
+ Non-Parent Node Connection,ROOM_2_FLR_3 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_2_FLR_3,ZoneExhaust,1
+ Non-Parent Node Connection,ROOM_3_MULT19_FLR_3 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_3_MULT19_FLR_3,ZoneNode,1
+ Non-Parent Node Connection,ROOM_3_MULT19_FLR_3 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_3_MULT19_FLR_3,ZoneInlet,1
+ Non-Parent Node Connection,ROOM_3_MULT19_FLR_3 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_3_MULT19_FLR_3,ZoneExhaust,1
+ Non-Parent Node Connection,ROOM_4_MULT19_FLR_3 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_4_MULT19_FLR_3,ZoneNode,1
+ Non-Parent Node Connection,ROOM_4_MULT19_FLR_3 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_4_MULT19_FLR_3,ZoneInlet,1
+ Non-Parent Node Connection,ROOM_4_MULT19_FLR_3 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_4_MULT19_FLR_3,ZoneExhaust,1
+ Non-Parent Node Connection,ROOM_5_FLR_3 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_5_FLR_3,ZoneNode,1
+ Non-Parent Node Connection,ROOM_5_FLR_3 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_5_FLR_3,ZoneInlet,1
+ Non-Parent Node Connection,ROOM_5_FLR_3 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_5_FLR_3,ZoneExhaust,1
+ Non-Parent Node Connection,ROOM_6_FLR_3 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_6_FLR_3,ZoneNode,1
+ Non-Parent Node Connection,ROOM_6_FLR_3 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_6_FLR_3,ZoneInlet,1
+ Non-Parent Node Connection,ROOM_6_FLR_3 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_6_FLR_3,ZoneExhaust,1
+ Non-Parent Node Connection,CORRIDOR_FLR_3 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,CORRIDOR_FLR_3,ZoneNode,1
+ Non-Parent Node Connection,CORRIDOR_FLR_3 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,CORRIDOR_FLR_3,ZoneInlet,1
+ Non-Parent Node Connection,CORRIDOR_FLR_3 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,CORRIDOR_FLR_3,ZoneExhaust,1
+ Non-Parent Node Connection,ROOM_1_FLR_6 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_1_FLR_6,ZoneNode,1
+ Non-Parent Node Connection,ROOM_1_FLR_6 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_1_FLR_6,ZoneInlet,1
+ Non-Parent Node Connection,ROOM_1_FLR_6 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_1_FLR_6,ZoneExhaust,1
+ Non-Parent Node Connection,ROOM_2_FLR_6 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_2_FLR_6,ZoneNode,1
+ Non-Parent Node Connection,ROOM_2_FLR_6 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_2_FLR_6,ZoneInlet,1
+ Non-Parent Node Connection,ROOM_2_FLR_6 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_2_FLR_6,ZoneExhaust,1
+ Non-Parent Node Connection,ROOM_3_MULT9_FLR_6 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_3_MULT9_FLR_6,ZoneNode,1
+ Non-Parent Node Connection,ROOM_3_MULT9_FLR_6 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_3_MULT9_FLR_6,ZoneInlet,1
+ Non-Parent Node Connection,ROOM_3_MULT9_FLR_6 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,ROOM_3_MULT9_FLR_6,ZoneExhaust,1
+ Non-Parent Node Connection,BANQUET_FLR_6 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,BANQUET_FLR_6,ZoneNode,1
+ Non-Parent Node Connection,BANQUET_FLR_6 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,BANQUET_FLR_6,ZoneInlet,1
+ Non-Parent Node Connection,BANQUET_FLR_6 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,BANQUET_FLR_6,ZoneExhaust,1
+ Non-Parent Node Connection,DINING_FLR_6 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,DINING_FLR_6,ZoneNode,1
+ Non-Parent Node Connection,DINING_FLR_6 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,DINING_FLR_6,ZoneInlet,1
+ Non-Parent Node Connection,DINING_FLR_6 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,DINING_FLR_6,ZoneExhaust,1
+ Non-Parent Node Connection,KITCHEN_FLR_6 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,KITCHEN_FLR_6,ZoneNode,1
+ Non-Parent Node Connection,KITCHEN_FLR_6 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,KITCHEN_FLR_6,ZoneInlet,1
+ Non-Parent Node Connection,KITCHEN_FLR_6 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,KITCHEN_FLR_6,ZoneExhaust,1
+ Non-Parent Node Connection,CORRIDOR_FLR_6 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,CORRIDOR_FLR_6,ZoneNode,1
+ Non-Parent Node Connection,CORRIDOR_FLR_6 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,CORRIDOR_FLR_6,ZoneInlet,1
+ Non-Parent Node Connection,CORRIDOR_FLR_6 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,CORRIDOR_FLR_6,ZoneExhaust,1
+ Non-Parent Node Connection,BOTTOM OUTDOORAIR NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,1
+ Non-Parent Node Connection,BANQUET_FLR_6 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,BANQUET_FLR_6,Outlet,1
+ Non-Parent Node Connection,BANQUET_FLR_6 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,BANQUET_FLR_6,Inlet,1
+ Non-Parent Node Connection,BANQUET_FLR_6 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,BANQUET_FLR_6,Outlet,1
+ Non-Parent Node Connection,BANQUET_FLR_6 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,2
+ Non-Parent Node Connection,BASEMENT INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,BASEMENT,Outlet,1
+ Non-Parent Node Connection,BASEMENT RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,BASEMENT,Inlet,1
+ Non-Parent Node Connection,BASEMENT OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,BASEMENT,Outlet,1
+ Non-Parent Node Connection,BASEMENT OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,3
+ Non-Parent Node Connection,CAFE_FLR_1 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,CAFE_FLR_1,Outlet,1
+ Non-Parent Node Connection,CAFE_FLR_1 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,CAFE_FLR_1,Inlet,1
+ Non-Parent Node Connection,CAFE_FLR_1 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,CAFE_FLR_1,Outlet,1
+ Non-Parent Node Connection,CAFE_FLR_1 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,4
+ Non-Parent Node Connection,CORRIDOR_FLR_3 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORRIDOR_FLR_3,Outlet,1
+ Non-Parent Node Connection,CORRIDOR_FLR_3 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORRIDOR_FLR_3,Inlet,1
+ Non-Parent Node Connection,CORRIDOR_FLR_3 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORRIDOR_FLR_3,Outlet,1
+ Non-Parent Node Connection,CORRIDOR_FLR_3 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,5
+ Non-Parent Node Connection,CORRIDOR_FLR_6 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORRIDOR_FLR_6,Outlet,1
+ Non-Parent Node Connection,CORRIDOR_FLR_6 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORRIDOR_FLR_6,Inlet,1
+ Non-Parent Node Connection,CORRIDOR_FLR_6 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORRIDOR_FLR_6,Outlet,1
+ Non-Parent Node Connection,CORRIDOR_FLR_6 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,6
+ Non-Parent Node Connection,DINING_FLR_6 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,DINING_FLR_6,Outlet,1
+ Non-Parent Node Connection,DINING_FLR_6 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,DINING_FLR_6,Inlet,1
+ Non-Parent Node Connection,DINING_FLR_6 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,DINING_FLR_6,Outlet,1
+ Non-Parent Node Connection,DINING_FLR_6 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,7
+ Non-Parent Node Connection,KITCHEN_FLR_6 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,KITCHEN_FLR_6,Outlet,1
+ Non-Parent Node Connection,KITCHEN_FLR_6 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,KITCHEN_FLR_6,Inlet,1
+ Non-Parent Node Connection,KITCHEN_FLR_6 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,KITCHEN_FLR_6,Outlet,1
+ Non-Parent Node Connection,KITCHEN_FLR_6 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,8
+ Non-Parent Node Connection,LAUNDRY_FLR_1 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,LAUNDRY_FLR_1,Outlet,1
+ Non-Parent Node Connection,LAUNDRY_FLR_1 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,LAUNDRY_FLR_1,Inlet,1
+ Non-Parent Node Connection,LAUNDRY_FLR_1 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,LAUNDRY_FLR_1,Outlet,1
+ Non-Parent Node Connection,LAUNDRY_FLR_1 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,9
+ Non-Parent Node Connection,LOBBY_FLR_1 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,LOBBY_FLR_1,Outlet,1
+ Non-Parent Node Connection,LOBBY_FLR_1 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,LOBBY_FLR_1,Inlet,1
+ Non-Parent Node Connection,LOBBY_FLR_1 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,LOBBY_FLR_1,Outlet,1
+ Non-Parent Node Connection,LOBBY_FLR_1 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,10
+ Non-Parent Node Connection,MECH_FLR_1 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,MECH_FLR_1,Outlet,1
+ Non-Parent Node Connection,MECH_FLR_1 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,MECH_FLR_1,Inlet,1
+ Non-Parent Node Connection,MECH_FLR_1 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,MECH_FLR_1,Outlet,1
+ Non-Parent Node Connection,MECH_FLR_1 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,11
+ Non-Parent Node Connection,RETAIL_1_FLR_1 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,RETAIL_1_FLR_1,Outlet,1
+ Non-Parent Node Connection,RETAIL_1_FLR_1 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,RETAIL_1_FLR_1,Inlet,1
+ Non-Parent Node Connection,RETAIL_1_FLR_1 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,RETAIL_1_FLR_1,Outlet,1
+ Non-Parent Node Connection,RETAIL_1_FLR_1 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,12
+ Non-Parent Node Connection,RETAIL_2_FLR_1 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,RETAIL_2_FLR_1,Outlet,1
+ Non-Parent Node Connection,RETAIL_2_FLR_1 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,RETAIL_2_FLR_1,Inlet,1
+ Non-Parent Node Connection,RETAIL_2_FLR_1 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,RETAIL_2_FLR_1,Outlet,1
+ Non-Parent Node Connection,RETAIL_2_FLR_1 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,13
+ Non-Parent Node Connection,ROOM_1_FLR_3 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_1_FLR_3,Outlet,1
+ Non-Parent Node Connection,ROOM_1_FLR_3 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_1_FLR_3,Inlet,1
+ Non-Parent Node Connection,ROOM_1_FLR_3 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_1_FLR_3,Outlet,1
+ Non-Parent Node Connection,ROOM_1_FLR_3 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,14
+ Non-Parent Node Connection,ROOM_1_FLR_6 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_1_FLR_6,Outlet,1
+ Non-Parent Node Connection,ROOM_1_FLR_6 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_1_FLR_6,Inlet,1
+ Non-Parent Node Connection,ROOM_1_FLR_6 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_1_FLR_6,Outlet,1
+ Non-Parent Node Connection,ROOM_1_FLR_6 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,15
+ Non-Parent Node Connection,ROOM_2_FLR_3 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_2_FLR_3,Outlet,1
+ Non-Parent Node Connection,ROOM_2_FLR_3 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_2_FLR_3,Inlet,1
+ Non-Parent Node Connection,ROOM_2_FLR_3 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_2_FLR_3,Outlet,1
+ Non-Parent Node Connection,ROOM_2_FLR_3 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,16
+ Non-Parent Node Connection,ROOM_2_FLR_6 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_2_FLR_6,Outlet,1
+ Non-Parent Node Connection,ROOM_2_FLR_6 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_2_FLR_6,Inlet,1
+ Non-Parent Node Connection,ROOM_2_FLR_6 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_2_FLR_6,Outlet,1
+ Non-Parent Node Connection,ROOM_2_FLR_6 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,17
+ Non-Parent Node Connection,ROOM_3_MULT9_FLR_6 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_3_MULT9_FLR_6,Outlet,1
+ Non-Parent Node Connection,ROOM_3_MULT9_FLR_6 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_3_MULT9_FLR_6,Inlet,1
+ Non-Parent Node Connection,ROOM_3_MULT9_FLR_6 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_3_MULT9_FLR_6,Outlet,1
+ Non-Parent Node Connection,ROOM_3_MULT9_FLR_6 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,18
+ Non-Parent Node Connection,ROOM_3_MULT19_FLR_3 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_3_MULT19_FLR_3,Outlet,1
+ Non-Parent Node Connection,ROOM_3_MULT19_FLR_3 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_3_MULT19_FLR_3,Inlet,1
+ Non-Parent Node Connection,ROOM_3_MULT19_FLR_3 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_3_MULT19_FLR_3,Outlet,1
+ Non-Parent Node Connection,ROOM_3_MULT19_FLR_3 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,19
+ Non-Parent Node Connection,ROOM_4_MULT19_FLR_3 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_4_MULT19_FLR_3,Outlet,1
+ Non-Parent Node Connection,ROOM_4_MULT19_FLR_3 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_4_MULT19_FLR_3,Inlet,1
+ Non-Parent Node Connection,ROOM_4_MULT19_FLR_3 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_4_MULT19_FLR_3,Outlet,1
+ Non-Parent Node Connection,ROOM_4_MULT19_FLR_3 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,20
+ Non-Parent Node Connection,ROOM_5_FLR_3 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_5_FLR_3,Outlet,1
+ Non-Parent Node Connection,ROOM_5_FLR_3 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_5_FLR_3,Inlet,1
+ Non-Parent Node Connection,ROOM_5_FLR_3 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_5_FLR_3,Outlet,1
+ Non-Parent Node Connection,ROOM_5_FLR_3 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,21
+ Non-Parent Node Connection,ROOM_6_FLR_3 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_6_FLR_3,Outlet,1
+ Non-Parent Node Connection,ROOM_6_FLR_3 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_6_FLR_3,Inlet,1
+ Non-Parent Node Connection,ROOM_6_FLR_3 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,ROOM_6_FLR_3,Outlet,1
+ Non-Parent Node Connection,ROOM_6_FLR_3 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,22
+ Non-Parent Node Connection,STORAGE_FLR_1 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,STORAGE_FLR_1,Outlet,1
+ Non-Parent Node Connection,STORAGE_FLR_1 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,STORAGE_FLR_1,Inlet,1
+ Non-Parent Node Connection,STORAGE_FLR_1 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,STORAGE_FLR_1,Outlet,1
+ Non-Parent Node Connection,STORAGE_FLR_1 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,23

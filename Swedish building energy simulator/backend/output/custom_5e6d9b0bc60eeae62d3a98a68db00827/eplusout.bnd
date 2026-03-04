@@ -1,0 +1,376 @@
+Program Version,EnergyPlus, Version 25.2.0-cf7368216c, YMD=2026.03.04 01:02
+! This file shows details about the branches, nodes, and other
+! elements of the flow connections.
+! This file is intended for use in "debugging" potential problems
+! that may also be detected by the program, but may be more easily
+! identified by "eye".
+! This file is also intended to support software which draws a
+! schematic diagram of the HVAC system.
+! ===============================================================
+! #Nodes,<Number of Unique Nodes>
+ #Nodes,63
+! <Node>,<NodeNumber>,<Node Name>,<Node Fluid Type>,<# Times Node Referenced After Definition>
+ Node,1,CORE_BOTTOM AIR NODE,Air,0
+ Node,2,CORE_BOTTOM INLET NODES,Air,1
+ Node,3,CORE_BOTTOM RETURN AIR NODE,Air,1
+ Node,4,PERIMETER_BOT_ZN_1 AIR NODE,Air,0
+ Node,5,PERIMETER_BOT_ZN_1 INLET NODES,Air,1
+ Node,6,PERIMETER_BOT_ZN_1 RETURN AIR NODE,Air,1
+ Node,7,PERIMETER_BOT_ZN_2 AIR NODE,Air,0
+ Node,8,PERIMETER_BOT_ZN_2 INLET NODES,Air,1
+ Node,9,PERIMETER_BOT_ZN_2 RETURN AIR NODE,Air,1
+ Node,10,PERIMETER_BOT_ZN_3 AIR NODE,Air,0
+ Node,11,PERIMETER_BOT_ZN_3 INLET NODES,Air,1
+ Node,12,PERIMETER_BOT_ZN_3 RETURN AIR NODE,Air,1
+ Node,13,PERIMETER_BOT_ZN_4 AIR NODE,Air,0
+ Node,14,PERIMETER_BOT_ZN_4 INLET NODES,Air,1
+ Node,15,PERIMETER_BOT_ZN_4 RETURN AIR NODE,Air,1
+ Node,16,CORE_MID AIR NODE,Air,0
+ Node,17,CORE_MID INLET NODES,Air,1
+ Node,18,CORE_MID RETURN AIR NODE,Air,1
+ Node,19,PERIMETER_MID_ZN_1 AIR NODE,Air,0
+ Node,20,PERIMETER_MID_ZN_1 INLET NODES,Air,1
+ Node,21,PERIMETER_MID_ZN_1 RETURN AIR NODE,Air,1
+ Node,22,PERIMETER_MID_ZN_2 AIR NODE,Air,0
+ Node,23,PERIMETER_MID_ZN_2 INLET NODES,Air,1
+ Node,24,PERIMETER_MID_ZN_2 RETURN AIR NODE,Air,1
+ Node,25,PERIMETER_MID_ZN_3 AIR NODE,Air,0
+ Node,26,PERIMETER_MID_ZN_3 INLET NODES,Air,1
+ Node,27,PERIMETER_MID_ZN_3 RETURN AIR NODE,Air,1
+ Node,28,PERIMETER_MID_ZN_4 AIR NODE,Air,0
+ Node,29,PERIMETER_MID_ZN_4 INLET NODES,Air,1
+ Node,30,PERIMETER_MID_ZN_4 RETURN AIR NODE,Air,1
+ Node,31,CORE_TOP AIR NODE,Air,0
+ Node,32,CORE_TOP INLET NODES,Air,1
+ Node,33,CORE_TOP RETURN AIR NODE,Air,1
+ Node,34,PERIMETER_TOP_ZN_1 AIR NODE,Air,0
+ Node,35,PERIMETER_TOP_ZN_1 INLET NODES,Air,1
+ Node,36,PERIMETER_TOP_ZN_1 RETURN AIR NODE,Air,1
+ Node,37,PERIMETER_TOP_ZN_2 AIR NODE,Air,0
+ Node,38,PERIMETER_TOP_ZN_2 INLET NODES,Air,1
+ Node,39,PERIMETER_TOP_ZN_2 RETURN AIR NODE,Air,1
+ Node,40,PERIMETER_TOP_ZN_3 AIR NODE,Air,0
+ Node,41,PERIMETER_TOP_ZN_3 INLET NODES,Air,1
+ Node,42,PERIMETER_TOP_ZN_3 RETURN AIR NODE,Air,1
+ Node,43,PERIMETER_TOP_ZN_4 AIR NODE,Air,0
+ Node,44,PERIMETER_TOP_ZN_4 INLET NODES,Air,1
+ Node,45,PERIMETER_TOP_ZN_4 RETURN AIR NODE,Air,1
+ Node,46,BOTTOM OUTDOORAIR NODE,Air,1
+ Node,47,MID OUTDOORAIR NODE,Air,0
+ Node,48,TOP OUTDOORAIR NODE,Air,0
+ Node,49,CORE_BOTTOM OUTDOOR AIR INLET NODE,Air,1
+ Node,50,CORE_MID OUTDOOR AIR INLET NODE,Air,1
+ Node,51,CORE_TOP OUTDOOR AIR INLET NODE,Air,1
+ Node,52,PERIMETER_BOT_ZN_1 OUTDOOR AIR INLET NODE,Air,1
+ Node,53,PERIMETER_BOT_ZN_2 OUTDOOR AIR INLET NODE,Air,1
+ Node,54,PERIMETER_BOT_ZN_3 OUTDOOR AIR INLET NODE,Air,1
+ Node,55,PERIMETER_BOT_ZN_4 OUTDOOR AIR INLET NODE,Air,1
+ Node,56,PERIMETER_MID_ZN_1 OUTDOOR AIR INLET NODE,Air,1
+ Node,57,PERIMETER_MID_ZN_2 OUTDOOR AIR INLET NODE,Air,1
+ Node,58,PERIMETER_MID_ZN_3 OUTDOOR AIR INLET NODE,Air,1
+ Node,59,PERIMETER_MID_ZN_4 OUTDOOR AIR INLET NODE,Air,1
+ Node,60,PERIMETER_TOP_ZN_1 OUTDOOR AIR INLET NODE,Air,1
+ Node,61,PERIMETER_TOP_ZN_2 OUTDOOR AIR INLET NODE,Air,1
+ Node,62,PERIMETER_TOP_ZN_3 OUTDOOR AIR INLET NODE,Air,1
+ Node,63,PERIMETER_TOP_ZN_4 OUTDOOR AIR INLET NODE,Air,1
+! ===============================================================
+! Suspicious nodes have 0 references.  It is normal for some nodes, however.
+! Listing nodes with 0 references (culled from previous list):
+! <Suspicious Node>,<NodeNumber>,<Node Name>,<Node Fluid Type>,<# Times Node Referenced After Definition>
+ Suspicious Node,1,CORE_BOTTOM AIR NODE,Air,0
+ Suspicious Node,4,PERIMETER_BOT_ZN_1 AIR NODE,Air,0
+ Suspicious Node,7,PERIMETER_BOT_ZN_2 AIR NODE,Air,0
+ Suspicious Node,10,PERIMETER_BOT_ZN_3 AIR NODE,Air,0
+ Suspicious Node,13,PERIMETER_BOT_ZN_4 AIR NODE,Air,0
+ Suspicious Node,16,CORE_MID AIR NODE,Air,0
+ Suspicious Node,19,PERIMETER_MID_ZN_1 AIR NODE,Air,0
+ Suspicious Node,22,PERIMETER_MID_ZN_2 AIR NODE,Air,0
+ Suspicious Node,25,PERIMETER_MID_ZN_3 AIR NODE,Air,0
+ Suspicious Node,28,PERIMETER_MID_ZN_4 AIR NODE,Air,0
+ Suspicious Node,31,CORE_TOP AIR NODE,Air,0
+ Suspicious Node,34,PERIMETER_TOP_ZN_1 AIR NODE,Air,0
+ Suspicious Node,37,PERIMETER_TOP_ZN_2 AIR NODE,Air,0
+ Suspicious Node,40,PERIMETER_TOP_ZN_3 AIR NODE,Air,0
+ Suspicious Node,43,PERIMETER_TOP_ZN_4 AIR NODE,Air,0
+ Suspicious Node,47,MID OUTDOORAIR NODE,Air,0
+ Suspicious Node,48,TOP OUTDOORAIR NODE,Air,0
+! ===============================================================
+! <#Branch Lists>,<Number of Branch Lists>
+ #Branch Lists,0
+! <Branch List>,<Branch List Count>,<Branch List Name>,<Loop Name>,<Loop Type>,<Number of Branches>
+! <Branch>,<Branch Count>,<Branch Name>,<Loop Name>,<Loop Type>,<Branch Inlet Node Name>,<Branch Outlet Node Name>
+! ===============================================================
+! <#Supply Air Paths>,<Number of Supply Air Paths>
+ #Supply Air Paths,0
+! <Supply Air Path>,<Supply Air Path Count>,<Supply Air Path Name>,<AirLoopHVAC Name>
+! <#Components on Supply Air Path>,<Number of Components>
+! <Supply Air Path Component>,<Component Count>,<Component Type>,<Component Name>,<AirLoopHVAC Name>
+! <#Outlet Nodes on Supply Air Path Component>,<Number of Nodes>
+! <Supply Air Path Component Nodes>,<Node Count>,<Component Type>,<Component Name>,<Inlet Node Name>,<Outlet Node Name>,<AirLoopHVAC Name>
+! ===============================================================
+! <#Return Air Paths>,<Number of Return Air Paths>
+ #Return Air Paths,0
+! <Return Air Path>,<Return Air Path Count>,<Return Air Path Name>,<AirLoopHVAC Name>
+! <#Components on Return Air Path>,<Number of Components>
+! <Return Air Path Component>,<Component Count>,<Component Type>,<Component Name>,<AirLoopHVAC Name>
+! <#Inlet Nodes on Return Air Path Component>,<Number of Nodes>
+! <Return Air Path Component Nodes>,<Node Count>,<Component Type>,<Component Name>,<Inlet Node Name>,<Outlet Node Name>,<AirLoopHVAC Name>
+! ===============================================================
+! #Outdoor Air Nodes,<Number of Outdoor Air Nodes>
+ #Outdoor Air Nodes,18
+! <Outdoor Air Node>,<NodeNumber>,<Node Name>
+ Outdoor Air Node,46,BOTTOM OUTDOORAIR NODE
+ Outdoor Air Node,47,MID OUTDOORAIR NODE
+ Outdoor Air Node,48,TOP OUTDOORAIR NODE
+ Outdoor Air Node,49,CORE_BOTTOM OUTDOOR AIR INLET NODE
+ Outdoor Air Node,50,CORE_MID OUTDOOR AIR INLET NODE
+ Outdoor Air Node,51,CORE_TOP OUTDOOR AIR INLET NODE
+ Outdoor Air Node,52,PERIMETER_BOT_ZN_1 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,53,PERIMETER_BOT_ZN_2 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,54,PERIMETER_BOT_ZN_3 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,55,PERIMETER_BOT_ZN_4 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,56,PERIMETER_MID_ZN_1 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,57,PERIMETER_MID_ZN_2 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,58,PERIMETER_MID_ZN_3 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,59,PERIMETER_MID_ZN_4 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,60,PERIMETER_TOP_ZN_1 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,61,PERIMETER_TOP_ZN_2 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,62,PERIMETER_TOP_ZN_3 OUTDOOR AIR INLET NODE
+ Outdoor Air Node,63,PERIMETER_TOP_ZN_4 OUTDOOR AIR INLET NODE
+! ===============================================================
+! <#Component Sets>,<Number of Component Sets>
+ #Component Sets,0
+! <Component Set>,<Component Set Count>,<Parent Object Type>,<Parent Object Name>,<Component Type>,<Component Name>,<Inlet Node ID>,<Outlet Node ID>,<Description>
+! ===============================================================
+! <# Plant Loops>,<Number of Plant Loops>
+ #Plant Loops,0
+! <Plant Loop>,<Plant Loop Name>,<Loop Type>,<Inlet Node Name>,<Outlet Node Name>,<Branch List>,<Connector List>
+! <Plant Loop Connector>,<Connector Type>,<Connector Name>,<Loop Name>,<Loop Type>,<Number of Inlets/Outlets>
+! <Plant Loop Connector Branches>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Branch>,<Outlet Branch>,<Loop Name>,<Loop Type>
+! <Plant Loop Connector Nodes>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Node>,<Outlet Node>,<Loop Name>,<Loop Type>
+! <Plant Loop Supply Connection>,<Plant Loop Name>,<Supply Side Outlet Node Name>,<Demand Side Inlet Node Name>
+! <Plant Loop Return Connection>,<Plant Loop Name>,<Demand Side Outlet Node Name>,<Supply Side Inlet Node Name>
+! ===============================================================
+! <# Condenser Loops>,<Number of Condenser Loops>
+ #Condenser Loops,0
+! <Condenser Loop>,<Condenser Loop Name>,<Loop Type>,<Inlet Node Name>,<Outlet Node Name>,<Branch List>,<Connector List>
+! <Condenser Loop Connector>,<Connector Type>,<Connector Name>,<Loop Name>,<Loop Type>,<Number of Inlets/Outlets>
+! <Condenser Loop Connector Branches>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Branch>,<Outlet Branch>,<Loop Name>,<Loop Type>
+! <Condenser Loop Connector Nodes>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Node>,<Outlet Node>,<Loop Name>,<Loop Type>
+! <Condenser Loop Supply Connection>,<Condenser Loop Name>,<Supply Side Outlet Node Name>,<Demand Side Inlet Node Name>
+! <Condenser Loop Return Connection>,<Condenser Loop Name>,<Demand Side Outlet Node Name>,<Supply Side Inlet Node Name>
+! ===============================================================
+! <# Controlled Zones>,<Number of Controlled Zones>
+ #Controlled Zones,15
+! <Controlled Zone>,<Controlled Zone Name>,<Equip List Name>,<Control List Name>,<Zone Node Name>,<# Inlet Nodes>,<# Exhaust Nodes>,<# Return Nodes>
+! <Controlled Zone Inlet>,<Inlet Node Count>,<Controlled Zone Name>,<Supply Air Inlet Node Name>,<SD Sys:Cooling/Heating [DD:Cooling] Inlet Node Name>,<DD Sys:Heating Inlet Node Name>
+! <Controlled Zone Exhaust>,<Exhaust Node Count>,<Controlled Zone Name>,<Exhaust Air Node Name>
+ Controlled Zone,CORE_BOTTOM,CORE_BOTTOM EQUIPMENT,,CORE_BOTTOM AIR NODE,1,1,0
+   Controlled Zone Inlet,1,CORE_BOTTOM,CORE_BOTTOM INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,CORE_BOTTOM,CORE_BOTTOM RETURN AIR NODE
+ Controlled Zone,CORE_MID,CORE_MID EQUIPMENT,,CORE_MID AIR NODE,1,1,0
+   Controlled Zone Inlet,1,CORE_MID,CORE_MID INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,CORE_MID,CORE_MID RETURN AIR NODE
+ Controlled Zone,CORE_TOP,CORE_TOP EQUIPMENT,,CORE_TOP AIR NODE,1,1,0
+   Controlled Zone Inlet,1,CORE_TOP,CORE_TOP INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,CORE_TOP,CORE_TOP RETURN AIR NODE
+ Controlled Zone,PERIMETER_TOP_ZN_3,PERIMETER_TOP_ZN_3 EQUIPMENT,,PERIMETER_TOP_ZN_3 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_TOP_ZN_3,PERIMETER_TOP_ZN_3 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_TOP_ZN_3,PERIMETER_TOP_ZN_3 RETURN AIR NODE
+ Controlled Zone,PERIMETER_TOP_ZN_2,PERIMETER_TOP_ZN_2 EQUIPMENT,,PERIMETER_TOP_ZN_2 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_TOP_ZN_2,PERIMETER_TOP_ZN_2 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_TOP_ZN_2,PERIMETER_TOP_ZN_2 RETURN AIR NODE
+ Controlled Zone,PERIMETER_TOP_ZN_1,PERIMETER_TOP_ZN_1 EQUIPMENT,,PERIMETER_TOP_ZN_1 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_TOP_ZN_1,PERIMETER_TOP_ZN_1 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_TOP_ZN_1,PERIMETER_TOP_ZN_1 RETURN AIR NODE
+ Controlled Zone,PERIMETER_TOP_ZN_4,PERIMETER_TOP_ZN_4 EQUIPMENT,,PERIMETER_TOP_ZN_4 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_TOP_ZN_4,PERIMETER_TOP_ZN_4 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_TOP_ZN_4,PERIMETER_TOP_ZN_4 RETURN AIR NODE
+ Controlled Zone,PERIMETER_BOT_ZN_3,PERIMETER_BOT_ZN_3 EQUIPMENT,,PERIMETER_BOT_ZN_3 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_BOT_ZN_3,PERIMETER_BOT_ZN_3 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_BOT_ZN_3,PERIMETER_BOT_ZN_3 RETURN AIR NODE
+ Controlled Zone,PERIMETER_BOT_ZN_2,PERIMETER_BOT_ZN_2 EQUIPMENT,,PERIMETER_BOT_ZN_2 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_BOT_ZN_2,PERIMETER_BOT_ZN_2 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_BOT_ZN_2,PERIMETER_BOT_ZN_2 RETURN AIR NODE
+ Controlled Zone,PERIMETER_BOT_ZN_1,PERIMETER_BOT_ZN_1 EQUIPMENT,,PERIMETER_BOT_ZN_1 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_BOT_ZN_1,PERIMETER_BOT_ZN_1 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_BOT_ZN_1,PERIMETER_BOT_ZN_1 RETURN AIR NODE
+ Controlled Zone,PERIMETER_BOT_ZN_4,PERIMETER_BOT_ZN_4 EQUIPMENT,,PERIMETER_BOT_ZN_4 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_BOT_ZN_4,PERIMETER_BOT_ZN_4 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_BOT_ZN_4,PERIMETER_BOT_ZN_4 RETURN AIR NODE
+ Controlled Zone,PERIMETER_MID_ZN_3,PERIMETER_MID_ZN_3 EQUIPMENT,,PERIMETER_MID_ZN_3 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_MID_ZN_3,PERIMETER_MID_ZN_3 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_MID_ZN_3,PERIMETER_MID_ZN_3 RETURN AIR NODE
+ Controlled Zone,PERIMETER_MID_ZN_2,PERIMETER_MID_ZN_2 EQUIPMENT,,PERIMETER_MID_ZN_2 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_MID_ZN_2,PERIMETER_MID_ZN_2 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_MID_ZN_2,PERIMETER_MID_ZN_2 RETURN AIR NODE
+ Controlled Zone,PERIMETER_MID_ZN_1,PERIMETER_MID_ZN_1 EQUIPMENT,,PERIMETER_MID_ZN_1 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_MID_ZN_1,PERIMETER_MID_ZN_1 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_MID_ZN_1,PERIMETER_MID_ZN_1 RETURN AIR NODE
+ Controlled Zone,PERIMETER_MID_ZN_4,PERIMETER_MID_ZN_4 EQUIPMENT,,PERIMETER_MID_ZN_4 AIR NODE,1,1,0
+   Controlled Zone Inlet,1,PERIMETER_MID_ZN_4,PERIMETER_MID_ZN_4 INLET NODES,Undefined,N/A
+   Controlled Zone Exhaust,1,PERIMETER_MID_ZN_4,PERIMETER_MID_ZN_4 RETURN AIR NODE
+! ===============================================================
+! <#Zone Equipment Lists>,<Number of Zone Equipment Lists>
+ #Zone Equipment Lists,15
+! <Zone Equipment List>,<Zone Equipment List Count>,<Zone Equipment List Name>,<Zone Name>,<Number of Components>
+! <Zone Equipment Component>,<Component Count>,<Component Type>,<Component Name>,<Zone Name>,<Heating Priority>,<Cooling Priority>
+ Zone Equipment List,1,CORE_BOTTOM EQUIPMENT,CORE_BOTTOM,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORE_BOTTOM,CORE_BOTTOM,1,1
+ Zone Equipment List,5,CORE_MID EQUIPMENT,CORE_MID,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORE_MID,CORE_MID,1,1
+ Zone Equipment List,6,CORE_TOP EQUIPMENT,CORE_TOP,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORE_TOP,CORE_TOP,1,1
+ Zone Equipment List,7,PERIMETER_TOP_ZN_3 EQUIPMENT,PERIMETER_TOP_ZN_3,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_3,PERIMETER_TOP_ZN_3,1,1
+ Zone Equipment List,8,PERIMETER_TOP_ZN_2 EQUIPMENT,PERIMETER_TOP_ZN_2,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_2,PERIMETER_TOP_ZN_2,1,1
+ Zone Equipment List,9,PERIMETER_TOP_ZN_1 EQUIPMENT,PERIMETER_TOP_ZN_1,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_1,PERIMETER_TOP_ZN_1,1,1
+ Zone Equipment List,10,PERIMETER_TOP_ZN_4 EQUIPMENT,PERIMETER_TOP_ZN_4,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_4,PERIMETER_TOP_ZN_4,1,1
+ Zone Equipment List,11,PERIMETER_BOT_ZN_3 EQUIPMENT,PERIMETER_BOT_ZN_3,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_3,PERIMETER_BOT_ZN_3,1,1
+ Zone Equipment List,12,PERIMETER_BOT_ZN_2 EQUIPMENT,PERIMETER_BOT_ZN_2,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_2,PERIMETER_BOT_ZN_2,1,1
+ Zone Equipment List,13,PERIMETER_BOT_ZN_1 EQUIPMENT,PERIMETER_BOT_ZN_1,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_1,PERIMETER_BOT_ZN_1,1,1
+ Zone Equipment List,14,PERIMETER_BOT_ZN_4 EQUIPMENT,PERIMETER_BOT_ZN_4,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_4,PERIMETER_BOT_ZN_4,1,1
+ Zone Equipment List,15,PERIMETER_MID_ZN_3 EQUIPMENT,PERIMETER_MID_ZN_3,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_3,PERIMETER_MID_ZN_3,1,1
+ Zone Equipment List,16,PERIMETER_MID_ZN_2 EQUIPMENT,PERIMETER_MID_ZN_2,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_2,PERIMETER_MID_ZN_2,1,1
+ Zone Equipment List,17,PERIMETER_MID_ZN_1 EQUIPMENT,PERIMETER_MID_ZN_1,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_1,PERIMETER_MID_ZN_1,1,1
+ Zone Equipment List,18,PERIMETER_MID_ZN_4 EQUIPMENT,PERIMETER_MID_ZN_4,1
+   Zone Equipment Component,1,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_4,PERIMETER_MID_ZN_4,1,1
+! ===============================================================
+! <#AirLoopHVACs>,<Number of AirLoopHVACs>
+ #AirLoopHVACs,0
+! <AirLoopHVAC>,<Air Loop Name>,<# Return Nodes>,<# Supply Nodes>,<# Zones Cooled>,<# Zones Heated>,<Outdoor Air Used>
+! <AirLoop Return Connections>,<Connection Count>,<AirLoopHVAC Name>,<Zn Eqp Return Node #>,<Zn Eqp Return Node Name>,<AirLoop Return Node #>,<Air Loop Return Node Name>
+! <AirLoop Supply Connections>,<Connection Count>,<AirLoopHVAC Name>,<Zn Eqp Supply Node #>,<Zn Eqp Supply Node Name>,<AirLoop Supply Node #>,<Air Loop Supply Node Name>
+! <Cooled Zone Info>,<Cooled Zone Count>,<Cooled Zone Name>,<Cooled Zone Inlet Node #>,<Cooled Zone Inlet Node Name>,<AirLoopHVAC Name>
+! <Heated Zone Info>,<Heated Zone Count>,<Heated Zone Name>,<Heated Zone Inlet Node #>,<Heated Zone Inlet Node Name>,<AirLoopHVAC Name>
+! <Outdoor Air Connections>,<OA Inlet Node #>,<OA Return Air Inlet Node Name>,<OA Outlet Node #>,<OA Mixed Air Outlet Node Name>,<AirLoopHVAC Name>
+! <AirLoopHVAC Connector>,<Connector Type>,<Connector Name>,<Loop Name>,<Loop Type>,<Number of Inlets/Outlets>
+! <AirLoopHVAC Connector Branches>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Branch>,<Outlet Branch>,<Loop Name>,<Loop Type>
+! <AirLoopHVAC Connector Nodes>,<Connector Node Count>,<Connector Type>,<Connector Name>,<Inlet Node>,<Outlet Node>,<Loop Name>,<Loop Type>
+! ===============================================================
+! <#Parent Node Connections>,<Number of Parent Node Connections>
+ #Parent Node Connections,0
+! <Parent Node Connection>,<Node Name>,<Node ObjectType>,<Node ObjectName>,<Node ConnectionType>,<Node FluidStream>
+! ===============================================================
+! <#Non-Parent Node Connections>,<Number of Non-Parent Node Connections>
+ #Non-Parent Node Connections,109
+! <Non-Parent Node Connection>,<Node Name>,<Node ObjectType>,<Node ObjectName>,<Node ConnectionType>,<Node FluidStream>
+ Non-Parent Node Connection,CORE_BOTTOM AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,CORE_BOTTOM,ZoneNode,1
+ Non-Parent Node Connection,CORE_BOTTOM INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,CORE_BOTTOM,ZoneInlet,1
+ Non-Parent Node Connection,CORE_BOTTOM RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,CORE_BOTTOM,ZoneExhaust,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_1 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_BOT_ZN_1,ZoneNode,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_1 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_BOT_ZN_1,ZoneInlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_1 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_BOT_ZN_1,ZoneExhaust,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_2 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_BOT_ZN_2,ZoneNode,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_2 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_BOT_ZN_2,ZoneInlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_2 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_BOT_ZN_2,ZoneExhaust,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_3 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_BOT_ZN_3,ZoneNode,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_3 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_BOT_ZN_3,ZoneInlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_3 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_BOT_ZN_3,ZoneExhaust,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_4 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_BOT_ZN_4,ZoneNode,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_4 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_BOT_ZN_4,ZoneInlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_4 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_BOT_ZN_4,ZoneExhaust,1
+ Non-Parent Node Connection,CORE_MID AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,CORE_MID,ZoneNode,1
+ Non-Parent Node Connection,CORE_MID INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,CORE_MID,ZoneInlet,1
+ Non-Parent Node Connection,CORE_MID RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,CORE_MID,ZoneExhaust,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_1 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_MID_ZN_1,ZoneNode,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_1 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_MID_ZN_1,ZoneInlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_1 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_MID_ZN_1,ZoneExhaust,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_2 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_MID_ZN_2,ZoneNode,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_2 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_MID_ZN_2,ZoneInlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_2 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_MID_ZN_2,ZoneExhaust,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_3 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_MID_ZN_3,ZoneNode,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_3 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_MID_ZN_3,ZoneInlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_3 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_MID_ZN_3,ZoneExhaust,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_4 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_MID_ZN_4,ZoneNode,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_4 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_MID_ZN_4,ZoneInlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_4 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_MID_ZN_4,ZoneExhaust,1
+ Non-Parent Node Connection,CORE_TOP AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,CORE_TOP,ZoneNode,1
+ Non-Parent Node Connection,CORE_TOP INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,CORE_TOP,ZoneInlet,1
+ Non-Parent Node Connection,CORE_TOP RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,CORE_TOP,ZoneExhaust,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_1 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_TOP_ZN_1,ZoneNode,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_1 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_TOP_ZN_1,ZoneInlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_1 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_TOP_ZN_1,ZoneExhaust,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_2 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_TOP_ZN_2,ZoneNode,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_2 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_TOP_ZN_2,ZoneInlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_2 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_TOP_ZN_2,ZoneExhaust,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_3 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_TOP_ZN_3,ZoneNode,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_3 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_TOP_ZN_3,ZoneInlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_3 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_TOP_ZN_3,ZoneExhaust,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_4 AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_TOP_ZN_4,ZoneNode,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_4 INLET NODES,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_TOP_ZN_4,ZoneInlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_4 RETURN AIR NODE,ZONEHVAC:EQUIPMENTCONNECTIONS,PERIMETER_TOP_ZN_4,ZoneExhaust,1
+ Non-Parent Node Connection,BOTTOM OUTDOORAIR NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,1
+ Non-Parent Node Connection,MID OUTDOORAIR NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,2
+ Non-Parent Node Connection,TOP OUTDOORAIR NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,3
+ Non-Parent Node Connection,CORE_BOTTOM INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORE_BOTTOM,Outlet,1
+ Non-Parent Node Connection,CORE_BOTTOM RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORE_BOTTOM,Inlet,1
+ Non-Parent Node Connection,CORE_BOTTOM OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORE_BOTTOM,Outlet,1
+ Non-Parent Node Connection,CORE_BOTTOM OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,4
+ Non-Parent Node Connection,CORE_MID INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORE_MID,Outlet,1
+ Non-Parent Node Connection,CORE_MID RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORE_MID,Inlet,1
+ Non-Parent Node Connection,CORE_MID OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORE_MID,Outlet,1
+ Non-Parent Node Connection,CORE_MID OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,5
+ Non-Parent Node Connection,CORE_TOP INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORE_TOP,Outlet,1
+ Non-Parent Node Connection,CORE_TOP RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORE_TOP,Inlet,1
+ Non-Parent Node Connection,CORE_TOP OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,CORE_TOP,Outlet,1
+ Non-Parent Node Connection,CORE_TOP OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,6
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_1 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_1,Outlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_1 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_1,Inlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_1 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_1,Outlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_1 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,7
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_2 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_2,Outlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_2 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_2,Inlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_2 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_2,Outlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_2 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,8
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_3 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_3,Outlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_3 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_3,Inlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_3 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_3,Outlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_3 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,9
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_4 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_4,Outlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_4 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_4,Inlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_4 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_BOT_ZN_4,Outlet,1
+ Non-Parent Node Connection,PERIMETER_BOT_ZN_4 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,10
+ Non-Parent Node Connection,PERIMETER_MID_ZN_1 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_1,Outlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_1 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_1,Inlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_1 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_1,Outlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_1 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,11
+ Non-Parent Node Connection,PERIMETER_MID_ZN_2 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_2,Outlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_2 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_2,Inlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_2 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_2,Outlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_2 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,12
+ Non-Parent Node Connection,PERIMETER_MID_ZN_3 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_3,Outlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_3 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_3,Inlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_3 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_3,Outlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_3 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,13
+ Non-Parent Node Connection,PERIMETER_MID_ZN_4 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_4,Outlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_4 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_4,Inlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_4 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_MID_ZN_4,Outlet,1
+ Non-Parent Node Connection,PERIMETER_MID_ZN_4 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,14
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_1 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_1,Outlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_1 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_1,Inlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_1 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_1,Outlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_1 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,15
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_2 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_2,Outlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_2 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_2,Inlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_2 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_2,Outlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_2 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,16
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_3 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_3,Outlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_3 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_3,Inlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_3 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_3,Outlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_3 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,17
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_4 INLET NODES,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_4,Outlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_4 RETURN AIR NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_4,Inlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_4 OUTDOOR AIR INLET NODE,ZONEHVAC:IDEALLOADSAIRSYSTEM,PERIMETER_TOP_ZN_4,Outlet,1
+ Non-Parent Node Connection,PERIMETER_TOP_ZN_4 OUTDOOR AIR INLET NODE,OUTDOORAIR:NODE,OutdoorAir:Node,OutdoorAir,18
+ Non-Parent Node Connection,BOTTOM OUTDOORAIR NODE,WATERHEATER:MIXED,DHW OFFCIE,OutsideAirReference,1

@@ -1,0 +1,16 @@
+ ReadVarsESO
+ processing:C:\Users\jiten\Downloads\building_simulation_v10\backend\modified_idf\custom_81dae5b4c4ca79cb3d243f7211671083.rvi
+ input file:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\custom_81dae5b4c4ca79cb3d243f7211671083\eplusout.eso
+ output file:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\custom_81dae5b4c4ca79cb3d243f7211671083\eplusout.csv
+ getting all vars from:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\custom_81dae5b4c4ca79cb3d243f7211671083\eplusout.eso
+  number variables requested for output=          65
+ ReadVars Run Time=00hr 00min  4.11sec
+ ReadVarsESO program completed successfully.
+ ReadVarsESO
+ processing:C:\Users\jiten\Downloads\building_simulation_v10\backend\modified_idf\custom_81dae5b4c4ca79cb3d243f7211671083.mvi
+ input file:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\custom_81dae5b4c4ca79cb3d243f7211671083\eplusout.mtr
+ output file:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\custom_81dae5b4c4ca79cb3d243f7211671083\eplusmtr.csv
+ getting all vars from:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\custom_81dae5b4c4ca79cb3d243f7211671083\eplusout.mtr
+  number variables requested for output=           6
+ ReadVars Run Time=00hr 00min  0.45sec
+ ReadVarsESO program completed successfully.

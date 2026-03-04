@@ -1,0 +1,16 @@
+ ReadVarsESO
+ processing:C:\Users\jiten\Downloads\building_simulation_v10\backend\modified_idf\office_1961-1975_lund.rvi
+ input file:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\office_1961-1975_lund\eplusout.eso
+ output file:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\office_1961-1975_lund\eplusout.csv
+ getting all vars from:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\office_1961-1975_lund\eplusout.eso
+  number variables requested for output=          65
+ ReadVars Run Time=00hr 00min  4.12sec
+ ReadVarsESO program completed successfully.
+ ReadVarsESO
+ processing:C:\Users\jiten\Downloads\building_simulation_v10\backend\modified_idf\office_1961-1975_lund.mvi
+ input file:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\office_1961-1975_lund\eplusout.mtr
+ output file:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\office_1961-1975_lund\eplusmtr.csv
+ getting all vars from:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\office_1961-1975_lund\eplusout.mtr
+  number variables requested for output=           6
+ ReadVars Run Time=00hr 00min  0.41sec
+ ReadVarsESO program completed successfully.

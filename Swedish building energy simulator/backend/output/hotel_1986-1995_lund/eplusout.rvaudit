@@ -1,0 +1,16 @@
+ ReadVarsESO
+ processing:C:\Users\jiten\Downloads\building_simulation_v10\backend\modified_idf\hotel_1986-1995_lund.rvi
+ input file:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\hotel_1986-1995_lund\eplusout.eso
+ output file:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\hotel_1986-1995_lund\eplusout.csv
+ getting all vars from:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\hotel_1986-1995_lund\eplusout.eso
+  number variables requested for output=          93
+ ReadVars Run Time=00hr 00min  7.53sec
+ ReadVarsESO program completed successfully.
+ ReadVarsESO
+ processing:C:\Users\jiten\Downloads\building_simulation_v10\backend\modified_idf\hotel_1986-1995_lund.mvi
+ input file:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\hotel_1986-1995_lund\eplusout.mtr
+ output file:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\hotel_1986-1995_lund\eplusmtr.csv
+ getting all vars from:C:\Users\jiten\Downloads\building_simulation_v10\backend\output\hotel_1986-1995_lund\eplusout.mtr
+  number variables requested for output=           6
+ ReadVars Run Time=00hr 00min  0.45sec
+ ReadVarsESO program completed successfully.
