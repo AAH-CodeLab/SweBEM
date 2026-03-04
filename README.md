@@ -84,3 +84,60 @@
   * `next.config.js`
   * `postcss.config.js`
   * `tailwind.config.js`
+
+
+
+## Recommended layout (to be revised)
+
+    swedish-building-energy-simulator/
+    ├── README.md
+    ├── .gitignore
+    ├── docs/
+    ├── scripts/
+    ├── configs/
+    │   ├── usecase_a/
+    │   │   ├── backend.yaml
+    │   │   └── frontend.yaml
+    │   └── usecase_b/
+    │       ├── backend.yaml
+    │       └── frontend.yaml
+    ├── apps/
+    │   ├── api/                      # backend entrypoint + "product" wiring
+    │   │   ├── pyproject.toml
+    │   │   ├── src/
+    │   │   │   └── api_app/
+    │   │   │       ├── main.py        # creates FastAPI/Flask app, loads config
+    │   │   │       ├── routes/
+    │   │   │       │   ├── common.py
+    │   │   │       │   ├── usecase_a.py
+    │   │   │       │   └── usecase_b.py
+    │   │   │       └── settings.py    # config parsing (env + yaml)
+    │   │   └── tests/
+    │   └── web/                      # Next.js app
+    │       ├── package.json
+    │       ├── app/
+    │       │   ├── (common)/
+    │       │   ├── usecase-a/
+    │       │   └── usecase-b/
+    │       └── ...
+    ├── packages/
+    │   └── simcore/                  # shared domain logic (Python)
+    │       ├── pyproject.toml
+    │       └── src/simcore/
+    │           ├── idf/
+    │           ├── weather/
+    │           ├── runner/
+    │           ├── caching/
+    │           ├── results/
+    │           └── __init__.py
+    ├── assets/                       # versioned, stable inputs only
+    │   ├── idf_templates/
+    │   │   ├── hospital/
+    │   │   └── ...
+    │   └── weather/
+    │       └── lund.epw
+    ├── var/                          # NOT versioned (generated/runtime)
+    │   ├── output/
+    │   ├── cache/
+    │   └── modified_idf/
+    └── .github/workflows/
