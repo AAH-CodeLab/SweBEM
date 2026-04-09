@@ -1,0 +1,208 @@
+{   
+    "test_simulation_single": {
+        "weather_station": "lund",
+        "building_type": "single-family-house",
+        "construction_periods": ["1996-2005"],
+        "n_CPUs": 1
+    },
+
+    "test_simulation_multiple": {
+        "weather_station": "lund",
+        "building_type": "single-family-house",
+        "construction_periods": ["before-1961", "1961-1975", "1976-1985", "1986-1995", "1996-2005"],
+        "n_CPUs": 5
+    },
+
+    "all_idf_files": {
+                    "single-family-house": {
+                        "before-1961": "sfh/SFH_before-1961.idf",
+                        "1961-1975":   "sfh/SFH_1961-1975.idf",
+                        "1976-1985":   "sfh/SFH_1976-1985.idf",
+                        "1986-1995":   "sfh/SFH_1986-1995.idf",
+                        "1996-2005":   "sfh/SFH_1996-2005.idf"
+                    },
+                    "mid-rise-apartment": {
+                        "before-1961": "mfd/MFD_before-1961.idf",
+                        "1961-1975":   "mfd/MFD_1961-1975.idf",
+                        "1976-1985":   "mfd/MFD_1976-1985.idf",
+                        "1986-1995":   "mfd/MFD_1986-1995.idf",
+                        "1996-2005":   "mfd/MFD_1996-2005.idf"
+                    },
+                    "office": {
+                        "before-1961": "office/Office_before-1961.idf",
+                        "1961-1975":   "office/Office_1961-1975.idf",
+                        "1976-1985":   "office/Office_1976-1985.idf",
+                        "1986-1995":   "office/Office_1986-1995.idf",
+                        "1996-2005":   "office/Office_1996-2005.idf"
+                    },
+                    "hotel": {
+                        "before-1961": "hotel/Hotel_before-1961.idf",
+                        "1961-1975":   "hotel/Hotel_1961-1975.idf",
+                        "1976-1985":   "hotel/Hotel_1976-1985.idf",
+                        "1986-1995":   "hotel/Hotel_1986-1995.idf",
+                        "1996-2005":   "hotel/Hotel_1996-2005.idf"
+                    },
+                    "school": {
+                        "before-1961": "school/School_before-1961.idf",
+                        "1961-1970":   "school/School_1961-1970.idf",
+                        "1971-1980":   "school/School_1971-1980.idf",
+                        "1981-1990":   "school/School_1981-1990.idf",
+                        "1991-2000":   "school/School_1991-2000.idf",
+                        "2000+":       "school/School_2000plus.idf"
+                    },
+                    "hospital": {
+                        "before-1961": "hospital/Hospital_before-1961.idf",
+                        "1961-1970":   "hospital/Hospital_1961-1970.idf",
+                        "1971-1980":   "hospital/Hospital_1971-1980.idf",
+                        "1981-1990":   "hospital/Hospital_1981-1990.idf",
+                        "1991-2000":   "hospital/Hospital_1991-2000.idf",
+                        "2000+":       "hospital/Hospital_2000plus.idf"
+                    }
+                },
+
+    "regions": {
+                    "NB_Norrbotten": [
+                        "kiruna", "gallivare", "lulea", "boden", "haparanda", 
+                        "pajala", "jokkmokk", "arvidsjaur"
+                    ],
+                    "VB_Vasterbotten": [
+                        "umea", "skelleftea", "lycksele", "vilhelmina", "storuman"
+                    ],
+                    "JA_Jamtland": [
+                        "ostersund", "are", "sveg"
+                    ],
+                    "VN_Vasternorrland": [
+                        "sundsvall", "harnosand", "ornskoldsvik"
+                    ],
+                    "GV_Gavleborg": [
+                        "gavle", "soderhamn"
+                    ],
+                    "KO_Dalarna": [
+                        "borlange", "mora", "malung", "idre"
+                    ],
+                    "VR_Varmland": [
+                        "karlstad", "arvika", "torsby"
+                    ],
+                    "OR_Orebro": [
+                        "orebro"
+                    ],
+                    "VM_Vastmanland": [
+                        "vasteras"
+                    ],
+                    "UP_Uppsala": [
+                        "uppsala"
+                    ],
+                    "ST_Stockholm": [
+                        "stockholm", "stockholm-arlanda", "stockholm-bromma"
+                    ],
+                    "SD_Sodermanland": [
+                        "eskilstuna", "nykoping"
+                    ],
+                    "OG_Ostergotland": [
+                        "norrkoping", "linkoping"
+                    ],
+                    "JO_Jonkoping": [
+                        "jonkoping"
+                    ],
+                    "KR_Kronoberg": [
+                        "vaxjo", "ljungby"
+                    ],
+                    "KA_Kalmar": [
+                        "kalmar"
+                    ],
+                    "GT_Gotland": [
+                        "visby"
+                    ],
+                    "BL_Blekinge": [
+                        "karlskrona", "ronneby"
+                    ],
+                    "SN_Skane": [
+                        "malmo", "lund", "helsingborg", "kristianstad", "angelholm"
+                    ],
+                    "HA_Halland": [
+                        "halmstad"
+                    ],
+                    "VG_Vastra_Gotaland": [
+                        "goteborg", "goteborg-landvetter", "trollhattan", "skovde", "satenas"
+                    ]
+        },
+
+    "station_filenames": {
+                    "kiruna": "SWE_NB_Kiruna.AP",
+                    "gallivare": "SWE_NB_Gallivare-Lapland-Malmberget",
+                    "lulea": "SWE_NB_Lulea.AP",
+                    "boden": "SWE_NB_Boden",
+                    "haparanda": "SWE_NB_Haparanda",
+                    "pajala": "SWE_NB_Pajala",
+                    "jokkmokk": "SWE_NB_Jokkmokk.AP",
+                    "arvidsjaur": "SWE_NB_Arvidsjaur.AP",
+
+                    "umea": "SWE_VB_Umea.AP",
+                    "skelleftea": "SWE_VB_Skelleftea.AP",
+                    "lycksele": "SWE_VB_Lycksele.AP",
+                    "vilhelmina": "SWE_VB_Vilhelmina.Lansen.AP",
+                    "storuman": "SWE_VB_Gunnarn-Storuman.AP",
+
+                    "ostersund": "SWE_JA_Ostersund-Froson.AP",
+                    "are": "SWE_JA_Are",
+                    "sveg": "SWE_JA_Harjedalen.Sveg.AP",
+
+                    "sundsvall": "SWE_VN_Harnosand-Sundsvall.Timra.AP",
+                    "harnosand": "SWE_VN_Harnosand-Sundsvall.Timra.AP",
+                    "ornskoldsvik": "SWE_VN_Ornskoldsvik.AP",
+
+                    "gavle": "SWE_GV_Gavle",
+                    "soderhamn": "SWE_GV_Soderhamn-Helsinge.AP",
+
+                    "borlange": "SWE_KO_Borlange-Dala.AP",
+                    "mora": "SWE_KO_Mora-Siljan.AP",
+                    "malung": "SWE_KO_Malung",
+                    "idre": "SWE_KO_Idre",
+
+                    "karlstad": "SWE_VR_Karlstad.AP",
+                    "arvika": "SWE_VR_Arvika.AP",
+                    "torsby": "SWE_VR_Torsby.AP",
+
+                    "orebro": "SWE_OR_Orebro.AP",
+
+                    "vasteras": "SWE_VM_Stockholm.Vasteras.AP",
+
+                    "uppsala": "SWE_UP_Uppsala-Arna.AP",
+
+                    "stockholm": "SWE_ST_Stockholm",
+                    "stockholm-arlanda": "SWE_ST_Stockholm.Arlanda.AP",
+                    "stockholm-bromma": "SWE_ST_Stockholm.Bromma.AP",
+
+                    "eskilstuna": "SWE_SD_Eskilstuna.AP",
+                    "nykoping": "SWE_SD_Stockholm.Skavsta.AP-Nykoping",
+
+                    "norrkoping": "SWE_OG_Norrkoping.AP",
+                    "linkoping": "SWE_OG_Linkoping.AP",
+
+                    "jonkoping": "SWE_JO_Jonkoping.AP",
+
+                    "vaxjo": "SWE_KR_Vaxjo",
+                    "ljungby": "SWE_KR_Ljungby",
+
+                    "kalmar": "SWE_KA_Kalmar.AP",
+
+                    "visby": "SWE_GT_Visby.AP",
+
+                    "karlskrona": "SWE_BL_Karlskrona-Soderstjerna",
+                    "ronneby": "SWE_BL_Ronneby.AP",
+
+                    "malmo": "SWE_SN_Malmo",
+                    "lund": "SWE_SN_Lund.Sol",
+                    "helsingborg": "SWE_SN_Helsingborg",
+                    "kristianstad": "SWE_SN_Kristianstad.AP",
+                    "angelholm": "SWE_SN_Angelholm-Helsingborg.AP",
+
+                    "halmstad": "SWE_HA_Halmstad",
+
+                    "goteborg": "SWE_VG_Gothenburg-Landvetter.AP",
+                    "goteborg-landvetter": "SWE_VG_Gothenburg-Landvetter.AP",
+                    "trollhattan": "SWE_VG_Trollhattan.Vanersborg.AP",
+                    "skovde": "SWE_VG_Skovde.AP",
+                    "satenas": "SWE_VG_Satenas.AP"
+                }
+}

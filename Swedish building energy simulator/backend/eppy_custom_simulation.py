@@ -32,6 +32,7 @@ except ImportError:
 # ============================================================================
 # CONFIGURATION
 # ============================================================================
+# NOTES: What are configurations used for?
 
 # Window U-values for each glazing type (W/m²K)
 WINDOW_U_VALUES = {
