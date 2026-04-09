@@ -17,7 +17,7 @@ dist/
 .env.production.local
 
 # Python
-__pycache__
+__pycache__/
 
 # Debug logs
 npm-debug.log*
