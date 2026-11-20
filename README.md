@@ -2,7 +2,7 @@
 
 **A tool for predicting heating and cooling loads in the Swedish building stock, based on building typologies.**
 
-SweBEM is a web-based tool that returns hourly heating and cooling load profiles, peak loads, and annual energy use for typical Swedish buildings. It combines EnergyPlus archetype models of eight building typologies with weather data for 54 locations in Sweden. The tool was developed at the Division of Building Physics, Lund University, to support early-stage design of geothermal 5th-generation district heating and cooling (Geo5GDHC) networks, where building loads are needed before detailed building data are available.
+SweBEM is a web-based tool that returns hourly heating and cooling load profiles, peak loads, and annual energy use for typical Swedish buildings. It combines EnergyPlus archetype models of eight building typologies with weather data for 54 locations in Sweden. The tool was developed at the Division of Building Physics, Lund University, to support early-stage design of geothermal 5th-generation district heating and cooling (5GDHC) networks, where building loads are needed before detailed building data are available.
 
 This repository contains the source code of the tool and the EnergyPlus archetype models (IDF files).
 
