@@ -161,6 +161,6 @@ SweBEM was developed within two projects:
 
 ## License
 
-The code is released under the [MIT License](LICENSE).
+The code is released under the [BSD 3-Clause License](LICENSE).
 
 The report is published separately under CC BY-NC-ND 4.0. That license applies to the report only, not to the code in this repository.

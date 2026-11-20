@@ -14,7 +14,7 @@ authors:
     family-names: "Abdul Hamid"
     affiliation: "Lund University"
 version: "1.0.0"
-license: MIT
+license: BSD-3-Clause
 repository-code: "https://github.com/AAH-CodeLab/SweBEM"
 keywords:
   - building energy simulation

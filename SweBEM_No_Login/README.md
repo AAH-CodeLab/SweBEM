@@ -88,4 +88,4 @@ Use the "Cite this repository" button on GitHub, or see [`CITATION.cff`](../CITA
 
 ## License
 
-Released under the MIT License. See [`LICENSE`](../LICENSE). The report is published separately under CC BY-NC-ND 4.0.
+Released under the BSD 3-Clause License. See [`LICENSE`](LICENSE). The report is published separately under CC BY-NC-ND 4.0.
