@@ -23,7 +23,7 @@ SweBEM is a web tool for simulating the annual and hourly energy use of Swedish 
 
 ## Requirements
 
-- [EnergyPlus 25.2](https://energyplus.net/downloads)
+- [EnergyPlus 26.2](https://energyplus.net/downloads)
 - Python 3.10 or later
 - Node.js 18 or later
 
@@ -39,16 +39,18 @@ python api_server.py
 
 The API runs at `http://127.0.0.1:8000`. Weather files are downloaded automatically from Climate.OneBuilding.Org the first time a station is used, and results are cached in `Backend/simulation_cache.db`.
 
-EnergyPlus is expected at `C:\EnergyPlusV25-2-0\energyplus.exe`. If it is installed elsewhere, set the `ENERGYPLUS_PATH` environment variable before starting the server:
+EnergyPlus 26.2.0 is expected at `C:\EnergyPlusV26-2-0\energyplus.exe`. If it is installed elsewhere, set the `ENERGYPLUS_PATH` environment variable before starting the server:
+
+On Windows, `start.bat` checks this executable before starting the servers and displays a warning if it is missing.
 
 ```powershell
 # Windows (PowerShell)
-$env:ENERGYPLUS_PATH = "D:\EnergyPlusV25-2-0\energyplus.exe"
+$env:ENERGYPLUS_PATH = "D:\EnergyPlusV26-2-0\energyplus.exe"
 ```
 
 ```bash
 # Linux / macOS
-export ENERGYPLUS_PATH=/usr/local/EnergyPlus-25-2-0/energyplus
+export ENERGYPLUS_PATH=/usr/local/EnergyPlus-26-2-0/energyplus
 ```
 
 ### 2. Frontend

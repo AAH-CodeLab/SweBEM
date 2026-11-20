@@ -4,7 +4,7 @@ title SweBEM Backend
 cd /d "%~dp0Backend"
 
 echo Ensuring Python dependencies are installed...
-python -m pip install -q fastapi uvicorn requests python-multipart
+python -m pip install -q -r requirements.txt python-multipart
 
 echo.
 echo Starting backend on http://localhost:8000 ...

@@ -192,13 +192,16 @@ def set_idd_path(energyplus_path: str = None):
     # Try to find IDD file
     idd_paths = [
         # Windows paths
+        r"C:\EnergyPlusV26-2-0\Energy+.idd",
         r"C:\EnergyPlusV25-2-0\Energy+.idd",
         r"C:\EnergyPlusV24-2-0\Energy+.idd",
         r"C:\EnergyPlusV23-2-0\Energy+.idd",
         # Linux paths
+        "/usr/local/EnergyPlus-26-2-0/Energy+.idd",
         "/usr/local/EnergyPlus-25-2-0/Energy+.idd",
         "/usr/local/EnergyPlus-24-2-0/Energy+.idd",
         # Mac paths
+        "/Applications/EnergyPlus-26-2-0/Energy+.idd",
         "/Applications/EnergyPlus-25-2-0/Energy+.idd",
     ]
     
@@ -1278,7 +1281,7 @@ if __name__ == "__main__":
                 ach=2.5,
                 window_type="triple",
                 wwr=20,
-                energyplus_path=os.environ.get("ENERGYPLUS_PATH", r"C:\EnergyPlusV25-2-0\energyplus.exe")
+                energyplus_path=os.environ.get("ENERGYPLUS_PATH", r"C:\EnergyPlusV26-2-0\energyplus.exe")
             )
             print("Test completed successfully!")
         except Exception as e:

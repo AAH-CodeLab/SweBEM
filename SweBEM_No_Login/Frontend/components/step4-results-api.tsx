@@ -20,12 +20,12 @@ import {
   type SimulationResult,
   type HourlyPowerData,
 } from "@/lib/api-client";
-import { getStationName, type ConstructionPeriodId } from "@/lib/sweden-climate-data";
+import { getStationName, type AnyPeriodId } from "@/lib/sweden-climate-data";
 import { SimulationLoading } from "./simulation-loading";
 
 interface Step4Props {
   weatherStation: string;
-  constructionPeriod: ConstructionPeriodId;
+  constructionPeriod: AnyPeriodId;
   buildingType: string;
   onResult?: (annual: SimulationResult, hourly: HourlyPowerData) => void;
 }

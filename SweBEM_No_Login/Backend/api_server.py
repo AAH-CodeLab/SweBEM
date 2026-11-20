@@ -54,7 +54,7 @@ except ImportError:
 
 # Path to the EnergyPlus executable. Set the ENERGYPLUS_PATH environment variable
 # to override the default. Energy+.idd is looked up in the same folder.
-ENERGYPLUS_PATH = os.environ.get("ENERGYPLUS_PATH", r"C:\EnergyPlusV25-2-0\energyplus.exe")
+ENERGYPLUS_PATH = os.environ.get("ENERGYPLUS_PATH", r"C:\EnergyPlusV26-2-0\energyplus.exe")
 
 BASE_DIR = Path(__file__).parent
 IDF_DIR = BASE_DIR / "idf_files"

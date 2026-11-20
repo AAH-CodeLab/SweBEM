@@ -15,7 +15,7 @@ import { Step4Results } from "@/components/step4-results-api";
 import { Step4ResultsDisplay } from "@/components/step4-results-display";
 import { Step4BatchResults } from "@/components/step4-batch-results";
 import { SimulationLoading } from "@/components/simulation-loading";
-import { getStationName, getIdfParams } from "@/lib/sweden-climate-data";
+import { getStationName, getIdfParams, type AnyPeriodId } from "@/lib/sweden-climate-data";
 
 export default function BuildingSimulator() {
 
@@ -24,7 +24,7 @@ export default function BuildingSimulator() {
   const [buildingType, setBuildingType] = useState("single-family-house");
   const [weatherStation, setWeatherStation] = useState("lund");
   const [constructionPeriod, setConstructionPeriod] =
-    useState<string>("1986-1995");
+    useState<AnyPeriodId>("1986-1995");
 
   // Custom parameters for real-time simulation
   const [wallU, setWallU] = useState(0.3);
@@ -549,7 +549,6 @@ export default function BuildingSimulator() {
                 setPreConfigHourly(null);
               }}
               hideConstructionPeriod={simulationType === "real-time"}
-              buildingType={buildingType}
             />
           )}
 

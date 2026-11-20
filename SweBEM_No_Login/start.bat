@@ -1,4 +1,5 @@
 @echo off
+setlocal
 REM ============================================================
 REM  SweBEM - one-click launcher (sequential startup)
 REM  1) Start backend, wait until it actually responds
@@ -13,6 +14,24 @@ echo   Starting SweBEM
 echo   Backend  : http://localhost:8000
 echo   Frontend : http://swebem.local:3000  (or http://localhost:3000)
 echo ============================================================
+echo.
+
+echo EnergyPlus version used by SweBEM: 26.2.0
+if defined ENERGYPLUS_PATH (
+  set "ENERGYPLUS_CHECK_PATH=%ENERGYPLUS_PATH%"
+) else (
+  set "ENERGYPLUS_CHECK_PATH=C:\EnergyPlusV26-2-0\energyplus.exe"
+)
+if exist "%ENERGYPLUS_CHECK_PATH%" (
+  echo EnergyPlus executable found: %ENERGYPLUS_CHECK_PATH%
+) else (
+  echo WARNING: EnergyPlus executable not found: %ENERGYPLUS_CHECK_PATH%
+  echo Install EnergyPlus 26.2.0 from https://energyplus.net/
+  echo If installed elsewhere, set ENERGYPLUS_PATH to the executable.
+  echo Simulations will not work until EnergyPlus is available.
+  echo.
+  pause
+)
 echo.
 
 REM --- [1/3] Backend -------------------------------------------------

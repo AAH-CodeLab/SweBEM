@@ -8,6 +8,7 @@ import {
   SCHOOL_HOSPITAL_PERIODS,
   getPeriodsForType,
   getIdfParams,
+  type AnyPeriodId,
 } from "@/lib/sweden-climate-data";
 import { SwedenMap } from "./sweden-map";
 import { StationCombobox } from "./station-combobox";
@@ -17,7 +18,7 @@ interface Step2Props {
   constructionPeriod: string;
   buildingType?: string;
   onWeatherStationChange: (value: string) => void;
-  onConstructionPeriodChange: (value: string) => void;
+  onConstructionPeriodChange: (value: AnyPeriodId) => void;
   hideConstructionPeriod?: boolean;
 }
 
