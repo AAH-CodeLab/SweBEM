@@ -1,0 +1,6 @@
+# Python dependencies for the SweBEM backend (Python 3.10+).
+# EnergyPlus itself is installed separately: https://energyplus.net/downloads
+fastapi
+uvicorn
+requests
+eppy

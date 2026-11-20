@@ -1278,7 +1278,7 @@ if __name__ == "__main__":
                 ach=2.5,
                 window_type="triple",
                 wwr=20,
-                energyplus_path=r"C:\EnergyPlusV25-2-0\energyplus.exe"
+                energyplus_path=os.environ.get("ENERGYPLUS_PATH", r"C:\EnergyPlusV25-2-0\energyplus.exe")
             )
             print("Test completed successfully!")
         except Exception as e:

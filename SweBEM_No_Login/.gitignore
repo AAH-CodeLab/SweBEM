@@ -1,0 +1,37 @@
+# Frontend-specific rules (node_modules, .next, .env.local, ...) live in Frontend/.gitignore
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# ---- Backend: generated at runtime ----
+# Recreated automatically by api_server.py / the Sobol scripts
+Backend/output/
+Backend/modified_idf/
+# EPW files are downloaded on demand from climate.onebuilding.org
+Backend/weather_files/
+# Local simulation cache (SQLite), rebuilt as simulations are run
+Backend/simulation_cache.db*
+# Backups from rerun scripts
+*.before_rerun
+
+# ---- Sobol sensitivity analysis: not published for now ----
+Backend/sobol_*
+Backend/rerun_failed_*.py
+
+# ---- Secrets / local config ----
+.env
+.env.*
+!.env.example
+.claude/settings.local.json
+
+# ---- OS / editors / Office ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+~$*

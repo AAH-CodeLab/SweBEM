@@ -28,13 +28,13 @@ import hashlib
 import shutil
 from pathlib import Path
 from datetime import datetime
-from typing import Optional
+from typing import Optional, Literal
 from contextlib import contextmanager
 
 try:
     from fastapi import FastAPI, HTTPException
     from fastapi.middleware.cors import CORSMiddleware
-    from pydantic import BaseModel
+    from pydantic import BaseModel, Field
     import uvicorn
 except ImportError:
     print("\n❌ Please install dependencies:")
@@ -52,7 +52,9 @@ except ImportError:
 # CONFIGURATION - EDIT THESE!
 # ============================================================================
 
-ENERGYPLUS_PATH = r"C:\EnergyPlusV25-2-0\energyplus.exe"
+# Path to the EnergyPlus executable. Set the ENERGYPLUS_PATH environment variable
+# to override the default. Energy+.idd is looked up in the same folder.
+ENERGYPLUS_PATH = os.environ.get("ENERGYPLUS_PATH", r"C:\EnergyPlusV25-2-0\energyplus.exe")
 
 BASE_DIR = Path(__file__).parent
 IDF_DIR = BASE_DIR / "idf_files"
@@ -837,17 +839,26 @@ class SimulationRequest(BaseModel):
     buildingType: str = "single-family-house"
 
 class CustomSimulationRequest(BaseModel):
+    # Numeric bounds are deliberately wider than the frontend sliders; they only
+    # reject physically meaningless input (negative, zero, NaN/inf, absurd values).
     weatherStation: str
-    wallU: float
-    atticU: float
-    groundU: float
-    ach: float
-    windowType: str
-    wwr: int
+    wallU: float = Field(..., ge=0.05, le=5.0)
+    atticU: float = Field(..., ge=0.05, le=5.0)
+    groundU: float = Field(..., ge=0.05, le=5.0)
+    ach: float = Field(..., ge=0.0, le=5.0)
+    windowType: Literal["single", "double", "triple"]
+    wwr: int = Field(..., ge=1, le=90)
     ventilationType: str = "mvhr"   # nv | mev-bv | mvhr (legacy names accepted)
-    heatedFloorArea: float = 125.0
-    numberOfFloors: int = 2
+    heatedFloorArea: float = Field(125.0, gt=0, le=1_000_000)
+    numberOfFloors: int = Field(2, ge=1, le=50)
     buildingType: str = "single-family-house"
+
+
+def _require_choice(value, allowed, field):
+    """Reject values outside a fixed set. These values end up in file paths,
+    so anything not on the allow-list (e.g. '../') must never get through."""
+    if value not in allowed:
+        raise HTTPException(status_code=400, detail=f"Invalid {field}: {value!r}")
 
 # Window U-values for each type
 WINDOW_U_VALUES = {
@@ -1170,6 +1181,9 @@ async def root():
 
 @app.post("/simulate")
 async def simulate(request: SimulationRequest):
+    _require_choice(request.weatherStation, STATION_FILENAMES, "weatherStation")
+    _require_choice(request.buildingType, ALL_IDF_FILES, "buildingType")
+    _require_choice(request.constructionPeriod, ALL_IDF_FILES[request.buildingType], "constructionPeriod")
     return run_simulation(request.weatherStation, request.constructionPeriod, request.buildingType)
 
 @app.post("/simulate/custom")
@@ -1186,6 +1200,14 @@ async def simulate_custom(request: CustomSimulationRequest):
     - windowType: Window type ("single", "double", "triple")
     - wwr: Window-to-wall ratio (15, 20, 30, 40)
     """
+    _require_choice(request.weatherStation, STATION_FILENAMES, "weatherStation")
+    _require_choice(request.buildingType, CUSTOM_IDF_TEMPLATES, "buildingType")
+    try:
+        vent_ok = _normalize_vent(request.ventilationType) in CUSTOM_IDF_TEMPLATES[request.buildingType]
+    except ValueError:
+        vent_ok = False
+    if not vent_ok:
+        raise HTTPException(status_code=400, detail=f"Invalid ventilationType: {request.ventilationType!r}")
     return run_custom_simulation(request)
 
 @app.get("/cache/stats")
@@ -1198,13 +1220,8 @@ async def cache_stats():
         entries = [{"station": r[0], "period": r[1], "type": r[2]} for r in cursor.fetchall()]
     return {"total_cached": count, "entries": entries}
 
-@app.delete("/cache/clear")
-async def clear_cache():
-    with get_db() as conn:
-        cursor = conn.cursor()
-        cursor.execute('DELETE FROM simulation_cache')
-        conn.commit()
-    return {"status": "cleared"}
+# Note: there is intentionally no endpoint for clearing the cache. To reset it,
+# stop the server and delete simulation_cache.db.
 
 if __name__ == "__main__":
     print("\n" + "="*60)
@@ -1215,4 +1232,5 @@ if __name__ == "__main__":
     print(f"  Cache DB: {CACHE_DB}")
     print(f"\n  Starting server at http://localhost:8000")
     print("="*60 + "\n")
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    # Bind to localhost only: the API has no authentication and must not be exposed publicly.
+    uvicorn.run(app, host="127.0.0.1", port=8000)

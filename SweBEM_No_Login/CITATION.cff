@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+type: software
+title: "SweBEM"
+abstract: >-
+  Web tool for simulating the annual and hourly energy use of Swedish buildings
+  with EnergyPlus. It covers eight building typologies, construction periods from
+  before 1961 to after 2000, and 56 Swedish weather stations.
+authors:
+  - given-names: "Pavan"
+    family-names: "Jitendra Jakkula"
+    affiliation: "Lund University"
+  - given-names: "Akram"
+    family-names: "Abdul Hamid"
+    affiliation: "Lund University"
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/AAH-CodeLab/SweBEM"
+keywords:
+  - building energy simulation
+  - EnergyPlus
+  - building stock modelling
+  - Sweden
