@@ -2,9 +2,11 @@
 
 **A tool for predicting heating and cooling loads in the Swedish building stock, based on building typologies.**
 
-SweBEM is a web-based tool that returns hourly heating and cooling load profiles, peak loads, and annual energy use for typical Swedish buildings. It combines EnergyPlus archetype models of eight building typologies with weather data for 54 locations in Sweden. The tool was developed at the Division of Building Physics, Lund University, to support early-stage design of geothermal 5th-generation district heating and cooling (5GDHC) networks, where building loads are needed before detailed building data are available.
+SweBEM is a web-based tool that returns hourly heating and cooling load profiles, peak loads, and annual energy use for typical Swedish buildings. It combines EnergyPlus archetype models of eight building typologies with weather data for 56 locations in Sweden. The tool was developed at the Division of Building Physics, Lund University, to support early-stage design of geothermal 5th-generation district heating and cooling (5GDHC) networks, where building loads are needed before detailed building data are available.
 
 This repository contains the source code of the tool and the EnergyPlus archetype models (IDF files).
+
+> **Local use only.** The backend has no authentication or rate limiting and is not hardened for public hosting. Do not expose it to the internet.
 
 ## Report
 
@@ -44,61 +46,59 @@ The stock is represented by 34 archetype models:
 
 Ventilation is modeled as natural ventilation (NV), mechanical exhaust ventilation (MEV), balanced ventilation without heat recovery (BV), or mechanical ventilation with heat recovery (MVHR). Envelope properties, ventilation rates, internal loads, and schedules for each archetype are listed in the report.
 
-Weather data are typical meteorological years (TMYx) from [climate.onebuilding.org](https://climate.onebuilding.org) for 54 locations covering the four Swedish climate zones. The files are downloaded automatically the first time a location is used.
+Weather data are typical meteorological years (TMYx) from [climate.onebuilding.org](https://climate.onebuilding.org) for 56 locations covering the four Swedish climate zones. The files are downloaded automatically the first time a location is used.
 
 ## Repository structure
 
 ```
-backend/
-  api_server.py               FastAPI server: runs EnergyPlus, parses results, caches them in SQLite
-  eppy_custom_simulation.py   Modifies the archetype IDF files for real-time customization (eppy)
-  idf_files/                  EnergyPlus archetype models, one folder per typology
-  weather_files/              Downloaded EPW weather files
-frontend/
-  app/                        Next.js pages
-  components/                 User interface (simulation steps, map of Sweden, result views)
-  lib/                        API client, climate data, pre-configured results
+SweBEM_No_Login/
+  Backend/
+    api_server.py               FastAPI server: runs EnergyPlus, parses results, caches them in SQLite
+    eppy_custom_simulation.py   Modifies archetype IDF files for real-time customization
+    idf_files/                  EnergyPlus archetype models, one folder per typology
+  Frontend/
+    app/                        Next.js pages
+    components/                 Simulation steps, map and result views
+    lib/                        API client and climate data
+  start.bat                     Windows launcher
+SweBEM_report_261119.pdf        Report describing the building models
 ```
 
 ## Getting started
 
 ### Requirements
 
-- [EnergyPlus](https://energyplus.net) 25.2
-- Python 3
+- [EnergyPlus](https://energyplus.net) 26.2.0
+- Python 3.10 or later
 - Node.js 18.17 or later
 
 ### Backend
 
+From the repository root:
+
 ```bash
-cd backend
-pip install fastapi uvicorn requests eppy
+cd SweBEM_No_Login/Backend
+pip install -r requirements.txt
 python api_server.py
 ```
 
-Before starting the server, set `ENERGYPLUS_PATH` at the top of `api_server.py` to the EnergyPlus executable on your computer (default: `C:\EnergyPlusV25-2-0\energyplus.exe`).
+The default executable is `C:\EnergyPlusV26-2-0\energyplus.exe`. If EnergyPlus is installed elsewhere, set the `ENERGYPLUS_PATH` environment variable to its executable before starting the server. On Windows, `SweBEM_No_Login/start.bat` checks the executable and starts both servers.
 
 The API runs at `http://localhost:8000`. Open that address in a browser to check that the server is running and that EnergyPlus was found.
 
 ### Frontend
 
+In a separate terminal, from the repository root:
+
 ```bash
-cd frontend
+cd SweBEM_No_Login/Frontend
 npm install
 npm run dev
 ```
 
 The user interface runs at `http://localhost:3000`.
 
-The frontend reads three environment variables from `frontend/.env.local`, which you create yourself:
-
-```
-NEXT_PUBLIC_API_URL=http://localhost:8000
-NEXT_PUBLIC_SUPABASE_URL=<URL of your Supabase project>
-NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon key of your Supabase project>
-```
-
-[Supabase](https://supabase.com) is used for user sign-in. Simulation results are cached locally by the backend in an SQLite database (`simulation_cache.db`).
+The frontend connects to `http://localhost:8000` by default. To use another backend address, set `NEXT_PUBLIC_API_URL` in `SweBEM_No_Login/Frontend/.env.local`. No login is required. Simulation results are cached locally by the backend in `SweBEM_No_Login/Backend/simulation_cache.db` and are specific to the EnergyPlus version.
 
 ## API
 
@@ -108,7 +108,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon key of your Supabase project>
 | `POST` | `/simulate` | Simulate an archetype (pre-configured mode) |
 | `POST` | `/simulate/custom` | Simulate a customized building (real-time customization) |
 | `GET` | `/cache/stats` | List cached simulations |
-| `DELETE` | `/cache/clear` | Empty the cache |
+
+To clear the cache, stop the backend and delete `SweBEM_No_Login/Backend/simulation_cache.db`.
 
 Example:
 
@@ -160,6 +161,6 @@ SweBEM was developed within two projects:
 
 ## License
 
-[To be decided – add a LICENSE file and name the license here.]
+The code is released under the [MIT License](LICENSE).
 
 The report is published separately under CC BY-NC-ND 4.0. That license applies to the report only, not to the code in this repository.

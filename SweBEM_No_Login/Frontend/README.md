@@ -37,7 +37,6 @@ Frontend/
 │   ├── step3-design-parameters.tsx
 │   ├── step3-custom-parameters.tsx        # Custom parameters for real-time mode
 │   ├── step3-batch-design-parameters.tsx
-│   ├── step4-results.tsx
 │   ├── step4-results-api.tsx
 │   ├── step4-results-display.tsx
 │   ├── step4-batch-results.tsx

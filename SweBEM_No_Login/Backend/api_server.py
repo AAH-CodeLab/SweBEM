@@ -311,8 +311,23 @@ def get_db():
     finally:
         conn.close()
 
+def get_energyplus_version():
+    try:
+        result = subprocess.run(
+            [ENERGYPLUS_PATH, "--version"], capture_output=True, text=True,
+            check=True, timeout=10,
+        )
+    except (OSError, subprocess.SubprocessError) as exc:
+        raise HTTPException(
+            status_code=503, detail=f"Could not determine EnergyPlus version: {exc}"
+        ) from exc
+    match = re.search(r"\bEnergyPlus,\s*Version\s+(\S+)", result.stdout, re.IGNORECASE)
+    if not match:
+        raise HTTPException(status_code=503, detail="Invalid EnergyPlus version output")
+    return match.group(1)
+
 def get_cache_id(weather_station, construction_period, building_type):
-    key = f"{weather_station}_{construction_period}_{building_type}"
+    key = f"{get_energyplus_version()}_{weather_station}_{construction_period}_{building_type}"
     return hashlib.md5(key.encode()).hexdigest()
 
 def get_cached_result(weather_station, construction_period, building_type):
@@ -827,7 +842,7 @@ app = FastAPI(title="Energy Simulation API", version="1.0.0")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "http://swebem.local:3000"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -932,7 +947,7 @@ def _normalize_vent(value):
 
 def get_custom_cache_id(params):
     """Generate a unique cache ID for custom simulation parameters."""
-    key = f"custom_{params.get('buildingType', 'single-family-house')}_{params['weatherStation']}_{params['wallU']}_{params['atticU']}_{params['groundU']}_{params['ach']}_{params['windowType']}_{params['wwr']}_{_normalize_vent(params.get('ventilationType', 'mvhr'))}_{params.get('heatedFloorArea', 125)}_{params.get('numberOfFloors', 2)}"
+    key = f"custom_{get_energyplus_version()}_{params.get('buildingType', 'single-family-house')}_{params['weatherStation']}_{params['wallU']}_{params['atticU']}_{params['groundU']}_{params['ach']}_{params['windowType']}_{params['wwr']}_{_normalize_vent(params.get('ventilationType', 'mvhr'))}_{params.get('heatedFloorArea', 125)}_{params.get('numberOfFloors', 2)}"
     return hashlib.md5(key.encode()).hexdigest()
 
 def get_cached_custom_result(params):
